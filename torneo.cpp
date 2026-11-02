@@ -7,6 +7,9 @@
 #include "mesa.hpp"
 #include "estado.hpp"
 #include "config.hpp"
+#include "puma.hpp"
+#include "can.hpp"
+#include "juez.hpp"
 using namespace std;
 
 int main(int argc, char *argv[]){
@@ -23,7 +26,7 @@ int main(int argc, char *argv[]){
         cerr << "N y M tienen q ser numeros mayores a 0" << endl;
         return 1;
     }
-
+    
     //valores por defecto, si viene config los pisa
     configuraxion config;
     if(argc == 4){
@@ -45,5 +48,29 @@ int main(int argc, char *argv[]){
     cout << numeroN << " jugadores, " << mesasM << " mesas" << endl;
     
     
+    //prueba para una mesa
+    Mesa mesa;
+    iniciarMesa(mesa, 0, tablero, mapeoCapturas, config);
+
+    pthread_t hiloDelJuez;
+    pthread_t hiloDelPuma;
+    pthread_t hilosCanes[TotalPerros];
+    rutCan rutas[TotalPerros]; //una ruta por can
+
+    pthread_create(&hiloDelJuez, NULL, hiloJuez, &mesa);
+    pthread_create(&hiloDelPuma, NULL, hiloPuma, &mesa);
+    for(int idCan = 0; idCan < TotalPerros; idCan++){
+        rutas[idCan].mesa = &mesa;
+        rutas[idCan].idCan = idCan;
+        pthread_create(&hilosCanes[idCan], NULL, hiloCan, &rutas[idCan]);
+    }
+
+    pthread_join(hiloDelJuez, NULL);
+    pthread_join(hiloDelPuma, NULL);
+    for(auto &hilo : hilosCanes){
+        pthread_join(hilo, NULL);
+    }
+
+    destruirMesa(mesa);
     return 0;
 }

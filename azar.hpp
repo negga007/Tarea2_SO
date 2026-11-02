@@ -3,8 +3,7 @@
 #include "config.hpp"
 using namespace std;
 
-//cada ficha tiene su dadito propio
-//asi con la misma semilla ningun hilo comparte dado con otro
+//cada ficha con su dadito, asi no comparten semilla entre hilos
 inline mt19937 crearDadito(const configuraxion &config, int idFicha){
     return mt19937(config.semilla + idFicha);
 }

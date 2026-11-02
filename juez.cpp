@@ -1,101 +1,67 @@
+#include <iostream>
 #include "juez.hpp"
+#include "livritoReglas.hpp"
+#include "consola.hpp"
+#include "synchro.hpp"
+using namespace std;
 
-constexpr int capturasParaGanar = 6; 
+constexpr int topeMovimientos = 500; //para q no sea infinito, 500 es empate
 
-bool validarPaso(const Estado &estado, const GRafo &grafo, int ficha, int destino){
-    //primero q los numeros existan, sino explota
-    if(ficha < 0 || ficha >= TotalFichas){
-        return false;
-    }
-    if(destino < 0 || destino >= TotalPosiciones){
-        return false;
-    }
-    //si ya se lo comieron no se mueve mas
-    if(estado.posicion[ficha] == pos_Capturado){
-        return false;
-    }
-    //si hay alguien en el destino tampoco
-    if(estado.casilla[destino] != Vacio){
-        return false;
-    }
-    int origen = estado.posicion[ficha];
+void *hiloJuez(void *argumento){
+    Mesa &mesa = *(Mesa *)argumento;
 
-    //el destino tiene q estar en la lista de vecinos
-    for(auto vecino : grafo.vecinos[origen]){
-        if(vecino == destino){
-          return true;
+    while(!partidaTerminada(mesa)){
+        int movimientos;
+        {
+            Guard guardia(&mesa.mutexAviso);
+            movimientos = mesa.movimientos;
         }
-    }
-    
-    return false;
-}
-//salto del puma
-bool validarSalto(const Estado &estado, const GRafoCapturas &mapeoCapturas, int ficha, int destino, int &casillaCapturada){
-    //solo el puma salta, los caninos no capturan
-    if(ficha != id_delpuma){
-        return false;
-    }
-    if(destino < 0 || destino >= TotalPosiciones){
-        return false;
-    }
-    if(estado.casilla[destino] != Vacio){
-        return false;
-    }
 
-    int origen = estado.posicion[id_delpuma];
+        //tablero
+        Estado estadoTablero;
+        for(auto &candado : mesa.mutexCasilla){
+            pthread_mutex_lock(&candado);
+        }
+        estadoTablero = mesa.estado;
+        for(auto &candado : mesa.mutexCasilla){
+            pthread_mutex_unlock(&candado);
+        }
 
-    for(const auto &salto : mapeoCapturas.Captura[origen]){
-        if(salto.aterrizaje == destino){
+        // quien gano
+        int resultado = res_Nadie;
+        if(pumaGano(estadoTablero)){
+            resultado = res_Puma;
+        }else if(pumaAcorralado(estadoTablero, *mesa.tablero, *mesa.mapeoCapturas)){
+            resultado = res_Perros;
+        }else if(movimientos >= topeMovimientos){
+            resultado = res_Empate;
+        }
 
-            int quienEsta = estado.casilla[salto.posCapturada];
-
-            //en el medio tiene q haber un perro, ni vacio ni el mismo puma <- imposible por porsiacaso we
-            if(quienEsta != Vacio && quienEsta != id_delpuma){
-                casillaCapturada = salto.posCapturada;
-                return true;
+        if(resultado != res_Nadie){
+            {
+                Guard guardia(&mesa.mutexAviso);
+                mesa.terminada = true;
+                mesa.resultado = resultado;
             }
+            Guard guardiaConsola(&mutexConsola);
+            if(resultado == res_Puma){
+                cout << "mesa " << mesa.idMesa << ": gano el puma con " ;
+                cout << estadoTablero.contadorCapturas << " capturas" << endl;
+            }else if(resultado == res_Perros){
+                cout << "mesa " << mesa.idMesa;
+                cout << ": ganaron los canes, el puma quedo sin movimientos" << endl;
+            }else{
+                cout << "mesa " << mesa.idMesa << ": empate, " ;
+                cout << topeMovimientos << " movimientos" << endl;
+            }
+            break;
+        }
+
+        // espera un movimiento
+        Guard guardia(&mesa.mutexAviso);
+        while(mesa.movimientos == movimientos && !mesa.terminada){
+            pthread_cond_wait(&mesa.avisoAlJuez, &mesa.mutexAviso);
         }
     }
-    return false;
-}
-
-//aplicaciones
-void aplicarPaso(Estado &estado, int ficha, int destino){
-    int origen = estado.posicion[ficha];
-    estado.casilla[origen] = Vacio;
-    estado.casilla[destino] = ficha;
-    estado.posicion[ficha] = destino;
-}
-
-void aplicarSalto(Estado &estado, int ficha, int destino, int casillaCapturada){
-    int perroPobre = estado.casilla[casillaCapturada];
-    estado.casilla[casillaCapturada] = Vacio;
-    estado.posicion[perroPobre] = pos_Capturado;
-    estado.contadorCapturas++;
-    aplicarPaso(estado, ficha, destino);
-}
-
-bool pumaGano(const Estado &estado){
-    return estado.contadorCapturas >= capturasParaGanar;
-}
-
-//acorralado 
-bool pumaAcorralado(const Estado &estado, const GRafo &grafo, const GRafoCapturas &mapeoCapturas){
-
-    int origen = estado.posicion[id_delpuma];
-
-    for(auto vecino : grafo.vecinos[origen]){
-        if(estado.casilla[vecino] == Vacio){
-            return false; 
-        }
-    }
-
-    for(const auto &salto : mapeoCapturas.Captura[origen]){
-        int temp = 0; //no importa es solo para ver que no se safa matando 
-
-        if(validarSalto(estado, mapeoCapturas, id_delpuma, salto.aterrizaje, temp)){
-            return false; 
-        }
-    }
-    return true;
+    return NULL;
 }
