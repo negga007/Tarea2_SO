@@ -29,7 +29,7 @@ void destruirMesa(Mesa &mesa){
     pthread_mutex_destroy(&mesa.mutexAviso);
     pthread_cond_destroy(&mesa.avisoAlJuez);
 }
-//captura de puma
+//captura de casillas para moverte
 bool cerrarCasillas(Mesa &mesa, const int casillas[], int cuantas){
     int orden[3];
     for(int i = 0; i < cuantas; i++){
@@ -45,6 +45,14 @@ bool cerrarCasillas(Mesa &mesa, const int casillas[], int cuantas){
             }
             return false;
         }
+    }
+
+    //si el juez ya grito ganador todos kietos
+    if(partidaTerminada(mesa)){
+        for(int i = 0; i < cuantas; i++){
+            pthread_mutex_unlock(&mesa.mutexCasilla[orden[i]]);
+        }
+        return false;
     }
     return true;
 }

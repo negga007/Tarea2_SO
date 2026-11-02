@@ -42,8 +42,6 @@ int main(int argc, char *argv[]){
     GRafoCapturas mapeoCapturas;
     construirCapturas(mapeoCapturas);
     //estado inicial de la partida
-    Estado estado;
-    iniciarEstado(estado, config);
 
     cout << numeroN << " jugadores, " << mesasM << " mesas" << endl;
     

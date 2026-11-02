@@ -19,16 +19,13 @@ void *hiloJuez(void *argumento){
 
         //tablero
         Estado estadoTablero;
+        int resultado = res_Nadie;
         for(auto &candado : mesa.mutexCasilla){
             pthread_mutex_lock(&candado);
         }
         estadoTablero = mesa.estado;
-        for(auto &candado : mesa.mutexCasilla){
-            pthread_mutex_unlock(&candado);
-        }
 
         // quien gano
-        int resultado = res_Nadie;
         if(pumaGano(estadoTablero)){
             resultado = res_Puma;
         }else if(pumaAcorralado(estadoTablero, *mesa.tablero, *mesa.mapeoCapturas)){
@@ -37,12 +34,17 @@ void *hiloJuez(void *argumento){
             resultado = res_Empate;
         }
 
+        //macamos el finish con el tablero sellado
         if(resultado != res_Nadie){
-            {
-                Guard guardia(&mesa.mutexAviso);
-                mesa.terminada = true;
-                mesa.resultado = resultado;
-            }
+            Guard guardia(&mesa.mutexAviso);
+            mesa.terminada = true;
+            mesa.resultado = resultado;
+        }
+        for(auto &candado : mesa.mutexCasilla){
+            pthread_mutex_unlock(&candado);
+        }
+
+        if(resultado != res_Nadie){
             Guard guardiaConsola(&mutexConsola);
             if(resultado == res_Puma){
                 cout << "mesa " << mesa.idMesa << ": gano el puma con " ;
