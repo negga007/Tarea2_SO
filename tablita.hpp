@@ -9,14 +9,13 @@ constexpr int Trono_derecha = 26;//posiciones contando 0
 constexpr int pos_Invalida = -1;
 
 
-
 constexpr int AsignadorDID(int x, int y){
-    return (x * TamannoTabla) + y; 
+    return (y * TamannoTabla) + x; 
     /*algo ais
     y
-    |2 5 8
-    |1 4 7           ejemplo con tamaño = 3
-    |0 3 6           y luego con los tronos arriva
+    |6 7 8
+    |3 4 5          ejemplo con tamaño = 3
+    |0 1 2          y luego con los tronos arriva
     -----------------x
     
     */
@@ -24,3 +23,15 @@ constexpr int AsignadorDID(int x, int y){
 struct GRafo{
     std::vector<int> vecinos[TotalPosiciones];
 };
+struct Capturas{
+    int posCapturada;
+    int aterrizaje;
+};
+
+struct GRafoCapturas{
+    std::vector<Capturas> Captura[TotalPosiciones];//matriz pa ver si puede capturar desde esa pos
+};
+
+
+void construirCapturas(GRafoCapturas &grafoCapturas);
+void contrsuirGrafo(GRafo &grafo);

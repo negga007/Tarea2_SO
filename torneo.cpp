@@ -1,42 +1,49 @@
 #include <vector>
 #include <cstdio>
+#include <cstdlib>
 #include <algorithm>
 #include <iostream>
 #include "tablita.hpp"
+#include "mesa.hpp"
+#include "estado.hpp"
+#include "config.hpp"
 using namespace std;
 
-void Caminos(GRafo &grafo, int pos1, int pos2){
-    if(pos1 < 0 || pos1 >= TotalPosiciones || pos2 < 0 || pos2 >= TotalPosiciones || pos1 == pos2){
-        cout << "posicion invalida" << endl;
-        return;
-    }else{
+int main(int argc, char *argv[]){
+    //ommmmm recordatorio ./torneo N M [config.txt]
+    if(argc < 3 || argc > 4){
+        cerr << "Uso: ./torneo N M [config.txt]" << endl;
+        return 1;
+    }
+    int numeroN = atoi(argv[1]); //cuantos jugadores llegan
+    int mesasM = atoi(argv[2]);  //max de mesas a la vez
 
-        if(find(grafo.vecinos[pos1].begin(), grafo.vecinos[pos1].end(), pos2) != grafo.vecinos[pos1].end()){
-            return;
-        }else{
-            if(find(grafo.vecinos[pos1].begin(), grafo.vecinos[pos1].end(), pos2) == grafo.vecinos[pos1].end()){
-            grafo.vecinos[pos1].push_back(pos2);
-            }
-            
-            if(find(grafo.vecinos[pos2].begin(), grafo.vecinos[pos2].end(), pos1) == grafo.vecinos[pos2].end()){
-            grafo.vecinos[pos2].push_back(pos1);
-            }
+    //si no son numeros atoi da 0
+    if(numeroN <= 0 || mesasM <= 0){
+        cerr << "N y M tienen q ser numeros mayores a 0" << endl;
+        return 1;
+    }
+
+    //valores por defecto, si viene config los pisa
+    configuraxion config;
+    if(argc == 4){
+        if(!leerConfig(argv[3], config)){
+            return 1; //leerConfig ya aviso cual fue el error
         }
     }
 
-}
+    //contriir tablero
+    GRafo tablero;
+    contrsuirGrafo(tablero);
+    //craftear mapa de capturas
+    GRafoCapturas mapeoCapturas;
+    construirCapturas(mapeoCapturas);
+    //estado inicial de la partida
+    Estado estado;
+    iniciarEstado(estado, config);
 
-int main(){
-    cout << "hello github" << endl;
-    GRafo grafo;    
-    Caminos(grafo,0,5);
-    cout << "vecinos de 0: " << grafo.vecinos[0][0] << " vecinos de 5: " << grafo.vecinos[5][0] << endl;
-    Caminos(grafo,0,5);
-    cout << "cantidad de vecinos de 0: " << grafo.vecinos[0].size() << endl;
-    Caminos(grafo, 0, 99);
-    Caminos(grafo, 3, 3);
-    cout << "vecinos de 0 tras llamadas invalidas: " << grafo.vecinos[0].size() << " (esperado 1)" << endl;
-    cout << "vecinos de 3 tras llamadas invalidas: " << grafo.vecinos[3].size() << " (esperado 0)" << endl;
+    cout << numeroN << " jugadores, " << mesasM << " mesas" << endl;
+    
     
     return 0;
 }
