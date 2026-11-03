@@ -5,6 +5,7 @@
 #include <iostream>
 #include "tablita.hpp"
 #include "mesa.hpp"
+#include "apagado.hpp"
 #include "estado.hpp"
 #include "config.hpp"
 #include "puma.hpp"
@@ -31,6 +32,13 @@ void *hiloDeLamesa(void *datosDlaMesa){
     Mesa mesa;
     iniciarMesa(mesa, datitos.rutMesa, *datitos.tablero, *datitos.mapeoCapturas, *datitos.config);
 
+    //si llego ctrl+c no jugamos
+    if(!meterMesa(&mesa)){
+        destruirMesa(mesa);
+        semAvisar(&cupos);
+        return NULL;
+    }
+
     pthread_t hiloDelJuez;
     pthread_t hiloDelPuma;
     pthread_t hilosCanes[TotalPerros];
@@ -52,6 +60,7 @@ void *hiloDeLamesa(void *datosDlaMesa){
         pthread_join(hilo, NULL);
     }
 
+    sacarMesa(&mesa); //sacar antes de destruir
     destruirMesa(mesa);
     semAvisar(&cupos);
     return NULL;
@@ -101,6 +110,14 @@ int main(int argc, char *argv[]){
 
     semIniciar(&cupos, mesasM);
 
+    sigset_t bloqueadas;
+    sigemptyset(&bloqueadas);
+    sigaddset(&bloqueadas, SIGINT);
+    pthread_sigmask(SIG_BLOCK, &bloqueadas, NULL);
+
+    pthread_t hiloCtrlC;
+    pthread_create(&hiloCtrlC, NULL, hiloSigint, NULL);
+
     vector<pthread_t> hilosPartida(partidas);
     vector<rutPartida> caminosDelaPartida(partidas);
 
@@ -115,6 +132,9 @@ int main(int argc, char *argv[]){
     for(auto &hilo : hilosPartida){
         pthread_join(hilo, NULL);
     }
+
+    pthread_kill(hiloCtrlC, SIGINT); 
+    pthread_join(hiloCtrlC, NULL);
 
     semDestruir(&cupos);
 

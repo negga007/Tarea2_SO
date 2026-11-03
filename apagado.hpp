@@ -2,6 +2,7 @@
 #include <pthread.h>
 #include <vector>
 #include "mesa.hpp"
+#include <signal.h>
 #include "synchro.hpp"
 
 //cosas q comparten el torneo y el hilo del ctrl+c
@@ -28,4 +29,24 @@ inline void sacarMesa(Mesa *mesa){
             break;
         }
     }
+}
+
+//uso de nn en vez de n sola para ñ pork los romanos lo hacian asi y es cul  :3
+//hilo duerme esperando ctrl+c, main bloquea sigint antes de crear hilos
+inline void *hiloSigint(void *){
+    sigset_t atrapa;
+    sigemptyset(&atrapa);
+    sigaddset(&atrapa, SIGINT);
+
+    int numSennnal = 0;
+    sigwait(&atrapa, &numSennnal); //aca duerme hasta q llegue el ctrl+c
+
+    Guard guardia(&mutexTorneo);
+    apagando = true; //meterMesa ya no deja entrar mas mesas
+    for(auto mesa : mesasActivas){
+        Guard guardiaMesa(&mesa->mutexAviso);
+        mesa->terminada = true;
+        pthread_cond_broadcast(&mesa->avisoAlJuez); //pa q el juez salga del wait
+    }
+    return NULL;
 }

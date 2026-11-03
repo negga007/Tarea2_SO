@@ -367,16 +367,16 @@ D6  x  x  P  x
 D10D1 D4  x  x 
 D5  x  x D2 D0 
 
-mov 42: el can 11 paso de 19 a 18
+mov 42: el can 0 paso de 4 a 9
        x       
     x     x    
 D6  x  x  P  x 
  x  x D8 D11 x 
  x  x D7 D9 D3 
-D10D1 D4  x  x 
-D5  x  x D2 D0 
+D10D1 D4  x D0 
+D5  x  x D2  x 
 
-mov 43: el can 0 paso de 4 a 9
+mov 43: el can 11 paso de 19 a 18
        x       
     x     x    
 D6  x  x  P  x 
@@ -1141,16 +1141,16 @@ D1  x D8 D7 D2
  x  x  x D4  x 
 D10D5 D9  x D3 
 
-mov 128: el can 9 paso de 2 a 7
+mov 128: el can 4 paso de 8 a 3
        x       
     x    D11   
  x  x  x D6 D0 
  x  x  P  x  x 
 D1  x D8 D7 D2 
- x  x D9 D4  x 
-D10D5  x  x D3 
+ x  x  x  x  x 
+D10D5 D9 D4 D3 
 
-mov 129: el can 4 paso de 8 a 3
+mov 129: el can 9 paso de 2 a 7
        x       
     x    D11   
  x  x  x D6 D0 
@@ -1285,16 +1285,16 @@ mov 143: el can 7 paso de 13 a 8
 D10D1 D9 D7 D2 
  x D5 D4  x D3 
 
-mov 144: el can 5 paso de 1 a 0
+mov 144: el can 0 paso de 23 a 18
       D11      
     x     x    
- x  x D6 D0  x 
- x  P  x  x  x 
+ x  x D6  x  x 
+ x  P  x D0  x 
  x  x D8  x  x 
 D10D1 D9 D7 D2 
-D5  x D4  x D3 
+ x D5 D4  x D3 
 
-mov 145: el can 0 paso de 23 a 18
+mov 145: el can 5 paso de 1 a 0
       D11      
     x     x    
  x  x D6  x  x 
@@ -1780,16 +1780,16 @@ D5 D10 x D8  x
  x  x D4 D3 D7 
  x D1  x  x  x 
 
-mov 199: el can 11 paso de 23 a 22
+mov 199: el can 2 paso de 19 a 24
        x       
     P     x    
- x  x D11 x  x 
- x D9 D0  x D2 
+ x  x  x D11D2 
+ x D9 D0  x  x 
 D5 D10 x D8  x 
  x  x D4 D3 D7 
  x D1  x  x  x 
 
-mov 200: el can 2 paso de 19 a 24
+mov 200: el can 11 paso de 23 a 22
        x       
     P     x    
  x  x D11 x D2 
@@ -2104,16 +2104,16 @@ D10 x  x D8  x
 D5  x D3 D1  x 
  x  x  x D7 D2 
 
-mov 235: el puma salto de 25 a 16 y se comio al perro 0
+mov 235: el can 5 paso de 5 a 10
        x       
-    x     x    
-D9  x D11 x  x 
-D10 P  x D8  x 
- x D4  x  x  x 
-D5  x D3 D1  x 
+    P     x    
+D9 D0 D11 x  x 
+D10 x  x D8  x 
+D5 D4  x  x  x 
+ x  x D3 D1  x 
  x  x  x D7 D2 
 
-mov 236: el can 5 paso de 5 a 10
+mov 236: el puma salto de 25 a 16 y se comio al perro 0
        x       
     x     x    
 D9  x D11 x  x 
@@ -2239,16 +2239,16 @@ D5  x  x D3  x
  x D4  x  x D1 
  x D7  x D2  x 
 
-mov 250: el can 1 paso de 9 a 4
+mov 250: el can 5 paso de 10 a 11
       D11      
    D9     x    
 D10 P  x  x  x 
  x  x  x D8  x 
-D5  x  x D3  x 
- x D4  x  x  x 
- x D7  x D2 D1 
+ x D5  x D3  x 
+ x D4  x  x D1 
+ x D7  x D2  x 
 
-mov 251: el can 5 paso de 10 a 11
+mov 251: el can 1 paso de 9 a 4
       D11      
    D9     x    
 D10 P  x  x  x 
@@ -2257,16 +2257,16 @@ D10 P  x  x  x
  x D4  x  x  x 
  x D7  x D2 D1 
 
-mov 252: el can 4 paso de 6 a 7
+mov 252: el puma paso de 21 a 22
       D11      
    D9     x    
-D10 P  x  x  x 
+D10 x  P  x  x 
  x  x  x D8  x 
  x D5  x D3  x 
- x  x D4  x  x 
+ x D4  x  x  x 
  x D7  x D2 D1 
 
-mov 253: el puma paso de 21 a 22
+mov 253: el can 4 paso de 6 a 7
       D11      
    D9     x    
 D10 x  P  x  x 
@@ -2473,16 +2473,16 @@ D9  x D8 D11 P
  x  x D4 D3  x 
  x  x D7 D1  x 
 
-mov 276: el can 7 paso de 2 a 1
+mov 276: el can 1 paso de 3 a 4
        x       
    D10    x    
 D9  x D8 D11 P 
  x D5  x  x  x 
  x  x D2  x  x 
  x  x D4 D3  x 
- x D7  x D1  x 
+ x  x D7  x D1 
 
-mov 277: el can 1 paso de 3 a 4
+mov 277: el can 7 paso de 2 a 1
        x       
    D10    x    
 D9  x D8 D11 P 
@@ -2779,16 +2779,16 @@ mov 309: el can 1 paso de 14 a 13
  x  x D3  x  x 
 D7  x  x D4  x 
 
-mov 310: el puma paso de 22 a 17
+mov 310: el can 5 paso de 11 a 12
       D9       
     x     x    
- x  x  x D8  x 
- x  x  P D2 D11
- x D5  x D1  x 
+ x  x  P D8  x 
+ x  x  x D2 D11
+ x  x D5 D1  x 
  x  x D3  x  x 
 D7  x  x D4  x 
 
-mov 311: el can 5 paso de 11 a 12
+mov 311: el puma paso de 22 a 17
       D9       
     x     x    
  x  x  x D8  x 
