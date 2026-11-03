@@ -37,11 +37,13 @@ static bool pruebaDcaminar(Mesa &mesa, int idCan, int &miCasilla, mt19937 &dadit
     abrirCasillas(mesa, caminata, 2);
 
     if(valido){
+        string texto = "el can " + to_string(idCan) + " paso de " + to_string(miCasilla) + " a " + to_string(destino);
         {
             Guard guardiaConsola(&mutexConsola);
-            cout << "mesa " << mesa.idMesa << ": el can " << idCan << " paso de " << miCasilla << " a " << destino << endl;
+            cout << "mesa " << mesa.idMesa << ": " << texto << endl;
         }
         miCasilla = destino;
+        anotarJugada(mesa, texto);
         avisarMovimiento(mesa);
     }
     return valido;

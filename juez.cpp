@@ -1,5 +1,8 @@
 #include <iostream>
 #include "juez.hpp"
+#include <fstream>
+#include <string>
+#include "dibujadorDlogs.hpp"
 #include "livritoReglas.hpp"
 #include "consola.hpp"
 #include "synchro.hpp"
@@ -7,8 +10,11 @@ using namespace std;
 
 constexpr int topeMovimientos = 500; //para q no sea infinito, 500 es empate
 
-void *hiloJuez(void *argumento){
-    Mesa &mesa = *(Mesa *)argumento;
+void *hiloJuez(void *datosDlaMesa){
+    Mesa &mesa = *(Mesa *)datosDlaMesa;
+    
+    ofstream log("mesa_" + to_string(mesa.idMesa) + ".txt"); //el log de esta mesa
+    int numeroJugada = 0;
 
     while(!partidaTerminada(mesa)){
         int movimientos;
@@ -24,6 +30,12 @@ void *hiloJuez(void *argumento){
             pthread_mutex_lock(&candado);
         }
         estadoTablero = mesa.estado;
+
+        vector<string> pendientes;
+        {
+            Guard guardiaJugadas(&mesa.mutexAviso);
+            pendientes.swap(mesa.jugadas);
+        }
 
         // quien gano
         if(pumaGano(estadoTablero)){
@@ -42,6 +54,15 @@ void *hiloJuez(void *argumento){
         }
         for(auto &candado : mesa.mutexCasilla){
             pthread_mutex_unlock(&candado);
+        }
+
+        //escribimos el log 
+        for(const auto &jugada : pendientes){
+            numeroJugada++;
+            log << "mov " << numeroJugada << ": " << jugada << "\n";
+        }
+        if(!pendientes.empty()){
+            log << pintarTablero(estadoTablero) << "\n";
         }
 
         if(resultado != res_Nadie){
@@ -65,5 +86,16 @@ void *hiloJuez(void *argumento){
             pthread_cond_wait(&mesa.avisoAlJuez, &mesa.mutexAviso);
         }
     }
+
+        //las ultimas q llegaron justo al final
+    {
+        Guard guardiaJugadas(&mesa.mutexAviso);
+        for(const auto &j : mesa.jugadas){
+            numeroJugada++;
+            log << "mov " << numeroJugada << ": " << j << "\n";
+        }
+        mesa.jugadas.clear();
+    }
+    
     return NULL;
 }

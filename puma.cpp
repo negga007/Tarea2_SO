@@ -16,6 +16,9 @@ static bool jugarPumita(Mesa &mesa, mt19937 &dadito){
     const auto &saltos = mesa.mapeoCapturas->Captura[origen];
 
     int opciones = pasos.size() + saltos.size();
+    if(opciones == 0){
+        return false; //no hay a donde moverse
+    }
     int eleccion = dadito() % opciones;
 
     //primero van los pasos y despues los saltos
@@ -33,10 +36,12 @@ static bool jugarPumita(Mesa &mesa, mt19937 &dadito){
         abrirCasillas(mesa, caminata, 2);
 
         if(valido){
+            string texto = "el puma paso de " + to_string(origen) + " a " + to_string(destino);
             {
                 Guard guardiaConsola(&mutexConsola);
-                cout << "mesa " << mesa.idMesa << ": el puma paso de " << origen << " a " << destino << endl;
+                cout << "mesa " << mesa.idMesa << ": " << texto << endl;
             }
+            anotarJugada(mesa, texto);
             avisarMovimiento(mesa);
         }
         return valido;
@@ -60,11 +65,13 @@ static bool jugarPumita(Mesa &mesa, mt19937 &dadito){
     abrirCasillas(mesa, caminata, 3);
 
     if(valido){
+        string texto = "el puma salto de " + to_string(origen) + " a " + to_string(destino)
+                     + " y se comio al perro " + to_string(perroComido);
         {
             Guard guardiaConsola(&mutexConsola);
-            cout << "mesa " << mesa.idMesa << ": el puma salto de " << origen << " a " << destino
-                 << " y se comio al perro " << perroComido << endl;
+            cout << "mesa " << mesa.idMesa << ": " << texto << endl;
         }
+        anotarJugada(mesa, texto);
         avisarMovimiento(mesa);
     }
     return valido;
@@ -76,7 +83,7 @@ void *hiloPuma(void *argumento){
 
     while(!partidaTerminada(mesa)){
         usleep(tirarRetardo(dadito, *mesa.config) * 1000); //de ms a microsegundos
-        
+
         if(partidaTerminada(mesa)) break;
 
         for(int intento = 0; intento < intentosPorCiclo; intento++){

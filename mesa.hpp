@@ -3,6 +3,9 @@
 #include "tablita.hpp"
 #include "estado.hpp"
 #include "config.hpp"
+#include <string>
+#include <vector>
+#include "synchro.hpp"
 
 //como termino la partida, resultado es res para la chaviza
 constexpr int res_Nadie = 0;   
@@ -19,7 +22,8 @@ struct Mesa {
     pthread_cond_t avisoAlJuez;                    //las fichas avisan aca q se movieron
     int movimientos;                               //n mov
     bool terminada;                                
-    int resultado;                                
+    int resultado;
+    vector<string> jugadas;                                   
 
     //esto solo se lee, nadie lo cambia asi q no necesita mutex
     const GRafo *tablero;
@@ -44,3 +48,9 @@ bool partidaTerminada(Mesa &mesa);
 
 //avisa al Juez q movimiento valido
 void avisarMovimiento(Mesa &mesa);
+
+//deja anotada una jugada para q el juez la escriba en el log
+inline void anotarJugada(Mesa &mesa, const std::string &jugada){
+    Guard guardia(&mesa.mutexAviso);
+    mesa.jugadas.push_back(jugada);
+}

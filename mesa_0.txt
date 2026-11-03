@@ -1,0 +1,3015 @@
+mov 1: el can 6 paso de 6 a 11
+       P       
+    x     x    
+ x  x  x  x  x 
+ x  x  x  x  x 
+D10D6  x  x D11
+D5  x D7 D8 D9 
+D0 D1 D2 D3 D4 
+
+mov 2: el can 1 paso de 1 a 6
+       P       
+    x     x    
+ x  x  x  x  x 
+ x  x  x  x  x 
+D10D6  x  x D11
+D5 D1 D7 D8 D9 
+D0  x D2 D3 D4 
+
+mov 3: el can 7 paso de 7 a 12
+       P       
+    x     x    
+ x  x  x  x  x 
+ x  x  x  x  x 
+D10D6 D7  x D11
+D5 D1  x D8 D9 
+D0  x D2 D3 D4 
+
+mov 4: el can 0 paso de 0 a 1
+       P       
+    x     x    
+ x  x  x  x  x 
+ x  x  x  x  x 
+D10D6 D7  x D11
+D5 D1  x D8 D9 
+ x D0 D2 D3 D4 
+
+mov 5: el puma paso de 27 a 22
+       x       
+    x     x    
+ x  x  P  x  x 
+ x  x  x  x  x 
+D10D6 D7  x D11
+D5 D1  x D8 D9 
+ x D0 D2 D3 D4 
+
+mov 6: el can 8 paso de 8 a 13
+       x       
+    x     x    
+ x  x  P  x  x 
+ x  x  x  x  x 
+D10D6 D7 D8 D11
+D5 D1  x  x D9 
+ x D0 D2 D3 D4 
+
+mov 7: el puma paso de 22 a 27
+       P       
+    x     x    
+ x  x  x  x  x 
+ x  x  x  x  x 
+D10D6 D7 D8 D11
+D5 D1  x  x D9 
+ x D0 D2 D3 D4 
+
+mov 8: el can 9 paso de 9 a 8
+       P       
+    x     x    
+ x  x  x  x  x 
+ x  x  x  x  x 
+D10D6 D7 D8 D11
+D5 D1  x D9  x 
+ x D0 D2 D3 D4 
+
+mov 9: el can 7 paso de 12 a 17
+       P       
+    x     x    
+ x  x  x  x  x 
+ x  x D7  x  x 
+D10D6  x D8 D11
+D5 D1  x D9  x 
+ x D0 D2 D3 D4 
+
+mov 10: el can 4 paso de 4 a 9
+       P       
+    x     x    
+ x  x  x  x  x 
+ x  x D7  x  x 
+D10D6  x D8 D11
+D5 D1  x D9 D4 
+ x D0 D2 D3  x 
+
+mov 11: el can 2 paso de 2 a 7
+       P       
+    x     x    
+ x  x  x  x  x 
+ x  x D7  x  x 
+D10D6  x D8 D11
+D5 D1 D2 D9 D4 
+ x D0  x D3  x 
+
+mov 12: el can 8 paso de 13 a 12
+       P       
+    x     x    
+ x  x  x  x  x 
+ x  x D7  x  x 
+D10D6 D8  x D11
+D5 D1 D2 D9 D4 
+ x D0  x D3  x 
+
+mov 13: el can 3 paso de 3 a 4
+       P       
+    x     x    
+ x  x  x  x  x 
+ x  x D7  x  x 
+D10D6 D8  x D11
+D5 D1 D2 D9 D4 
+ x D0  x  x D3 
+
+mov 14: el can 5 paso de 5 a 0
+       P       
+    x     x    
+ x  x  x  x  x 
+ x  x D7  x  x 
+D10D6 D8  x D11
+ x D1 D2 D9 D4 
+D5 D0  x  x D3 
+
+mov 15: el can 10 paso de 10 a 5
+       P       
+    x     x    
+ x  x  x  x  x 
+ x  x D7  x  x 
+ x D6 D8  x D11
+D10D1 D2 D9 D4 
+D5 D0  x  x D3 
+
+mov 16: el can 6 paso de 11 a 16
+       P       
+    x     x    
+ x  x  x  x  x 
+ x D6 D7  x  x 
+ x  x D8  x D11
+D10D1 D2 D9 D4 
+D5 D0  x  x D3 
+
+mov 17: el can 9 paso de 8 a 13
+       P       
+    x     x    
+ x  x  x  x  x 
+ x D6 D7  x  x 
+ x  x D8 D9 D11
+D10D1 D2  x D4 
+D5 D0  x  x D3 
+
+mov 18: el can 0 paso de 1 a 2
+       P       
+    x     x    
+ x  x  x  x  x 
+ x D6 D7  x  x 
+ x  x D8 D9 D11
+D10D1 D2  x D4 
+D5  x D0  x D3 
+
+mov 19: el can 8 paso de 12 a 11
+       P       
+    x     x    
+ x  x  x  x  x 
+ x D6 D7  x  x 
+ x D8  x D9 D11
+D10D1 D2  x D4 
+D5  x D0  x D3 
+
+mov 20: el can 5 paso de 0 a 1
+       P       
+    x     x    
+ x  x  x  x  x 
+ x D6 D7  x  x 
+ x D8  x D9 D11
+D10D1 D2  x D4 
+ x D5 D0  x D3 
+
+mov 21: el can 4 paso de 9 a 8
+       P       
+    x     x    
+ x  x  x  x  x 
+ x D6 D7  x  x 
+ x D8  x D9 D11
+D10D1 D2 D4  x 
+ x D5 D0  x D3 
+
+mov 22: el can 3 paso de 4 a 9
+       P       
+    x     x    
+ x  x  x  x  x 
+ x D6 D7  x  x 
+ x D8  x D9 D11
+D10D1 D2 D4 D3 
+ x D5 D0  x  x 
+
+mov 23: el puma paso de 27 a 22
+       x       
+    x     x    
+ x  x  P  x  x 
+ x D6 D7  x  x 
+ x D8  x D9 D11
+D10D1 D2 D4 D3 
+ x D5 D0  x  x 
+
+mov 24: el can 7 paso de 17 a 12
+       x       
+    x     x    
+ x  x  P  x  x 
+ x D6  x  x  x 
+ x D8 D7 D9 D11
+D10D1 D2 D4 D3 
+ x D5 D0  x  x 
+
+mov 25: el puma paso de 22 a 23
+       x       
+    x     x    
+ x  x  x  P  x 
+ x D6  x  x  x 
+ x D8 D7 D9 D11
+D10D1 D2 D4 D3 
+ x D5 D0  x  x 
+
+mov 26: el can 6 paso de 16 a 15
+       x       
+    x     x    
+ x  x  x  P  x 
+D6  x  x  x  x 
+ x D8 D7 D9 D11
+D10D1 D2 D4 D3 
+ x D5 D0  x  x 
+
+mov 27: el can 10 paso de 5 a 10
+       x       
+    x     x    
+ x  x  x  P  x 
+D6  x  x  x  x 
+D10D8 D7 D9 D11
+ x D1 D2 D4 D3 
+ x D5 D0  x  x 
+
+mov 28: el can 8 paso de 11 a 16
+       x       
+    x     x    
+ x  x  x  P  x 
+D6 D8  x  x  x 
+D10 x D7 D9 D11
+ x D1 D2 D4 D3 
+ x D5 D0  x  x 
+
+mov 29: el can 11 paso de 14 a 19
+       x       
+    x     x    
+ x  x  x  P  x 
+D6 D8  x  x D11
+D10 x D7 D9  x 
+ x D1 D2 D4 D3 
+ x D5 D0  x  x 
+
+mov 30: el can 0 paso de 2 a 3
+       x       
+    x     x    
+ x  x  x  P  x 
+D6 D8  x  x D11
+D10 x D7 D9  x 
+ x D1 D2 D4 D3 
+ x D5  x D0  x 
+
+mov 31: el can 2 paso de 7 a 2
+       x       
+    x     x    
+ x  x  x  P  x 
+D6 D8  x  x D11
+D10 x D7 D9  x 
+ x D1  x D4 D3 
+ x D5 D2 D0  x 
+
+mov 32: el can 10 paso de 10 a 5
+       x       
+    x     x    
+ x  x  x  P  x 
+D6 D8  x  x D11
+ x  x D7 D9  x 
+D10D1  x D4 D3 
+ x D5 D2 D0  x 
+
+mov 33: el can 9 paso de 13 a 18
+       x       
+    x     x    
+ x  x  x  P  x 
+D6 D8  x D9 D11
+ x  x D7  x  x 
+D10D1  x D4 D3 
+ x D5 D2 D0  x 
+
+mov 34: el can 0 paso de 3 a 4
+       x       
+    x     x    
+ x  x  x  P  x 
+D6 D8  x D9 D11
+ x  x D7  x  x 
+D10D1  x D4 D3 
+ x D5 D2  x D0 
+
+mov 35: el can 8 paso de 16 a 17
+       x       
+    x     x    
+ x  x  x  P  x 
+D6  x D8 D9 D11
+ x  x D7  x  x 
+D10D1  x D4 D3 
+ x D5 D2  x D0 
+
+mov 36: el can 6 paso de 15 a 20
+       x       
+    x     x    
+D6  x  x  P  x 
+ x  x D8 D9 D11
+ x  x D7  x  x 
+D10D1  x D4 D3 
+ x D5 D2  x D0 
+
+mov 37: el can 4 paso de 8 a 7
+       x       
+    x     x    
+D6  x  x  P  x 
+ x  x D8 D9 D11
+ x  x D7  x  x 
+D10D1 D4  x D3 
+ x D5 D2  x D0 
+
+mov 38: el can 5 paso de 1 a 0
+       x       
+    x     x    
+D6  x  x  P  x 
+ x  x D8 D9 D11
+ x  x D7  x  x 
+D10D1 D4  x D3 
+D5  x D2  x D0 
+
+mov 39: el can 3 paso de 9 a 14
+       x       
+    x     x    
+D6  x  x  P  x 
+ x  x D8 D9 D11
+ x  x D7  x D3 
+D10D1 D4  x  x 
+D5  x D2  x D0 
+
+mov 40: el can 2 paso de 2 a 3
+       x       
+    x     x    
+D6  x  x  P  x 
+ x  x D8 D9 D11
+ x  x D7  x D3 
+D10D1 D4  x  x 
+D5  x  x D2 D0 
+
+mov 41: el can 9 paso de 18 a 13
+       x       
+    x     x    
+D6  x  x  P  x 
+ x  x D8  x D11
+ x  x D7 D9 D3 
+D10D1 D4  x  x 
+D5  x  x D2 D0 
+
+mov 42: el can 11 paso de 19 a 18
+       x       
+    x     x    
+D6  x  x  P  x 
+ x  x D8 D11 x 
+ x  x D7 D9 D3 
+D10D1 D4  x  x 
+D5  x  x D2 D0 
+
+mov 43: el can 0 paso de 4 a 9
+       x       
+    x     x    
+D6  x  x  P  x 
+ x  x D8 D11 x 
+ x  x D7 D9 D3 
+D10D1 D4  x D0 
+D5  x  x D2  x 
+
+mov 44: el can 1 paso de 6 a 1
+       x       
+    x     x    
+D6  x  x  P  x 
+ x  x D8 D11 x 
+ x  x D7 D9 D3 
+D10 x D4  x D0 
+D5 D1  x D2  x 
+
+mov 45: el can 10 paso de 5 a 6
+       x       
+    x     x    
+D6  x  x  P  x 
+ x  x D8 D11 x 
+ x  x D7 D9 D3 
+ x D10D4  x D0 
+D5 D1  x D2  x 
+
+mov 46: el can 4 paso de 7 a 2
+       x       
+    x     x    
+D6  x  x  P  x 
+ x  x D8 D11 x 
+ x  x D7 D9 D3 
+ x D10 x  x D0 
+D5 D1 D4 D2  x 
+
+mov 47: el can 0 paso de 9 a 4
+       x       
+    x     x    
+D6  x  x  P  x 
+ x  x D8 D11 x 
+ x  x D7 D9 D3 
+ x D10 x  x  x 
+D5 D1 D4 D2 D0 
+
+mov 48: el can 6 paso de 20 a 21
+       x       
+    x     x    
+ x D6  x  P  x 
+ x  x D8 D11 x 
+ x  x D7 D9 D3 
+ x D10 x  x  x 
+D5 D1 D4 D2 D0 
+
+mov 49: el can 10 paso de 6 a 5
+       x       
+    x     x    
+ x D6  x  P  x 
+ x  x D8 D11 x 
+ x  x D7 D9 D3 
+D10 x  x  x  x 
+D5 D1 D4 D2 D0 
+
+mov 50: el can 3 paso de 14 a 9
+       x       
+    x     x    
+ x D6  x  P  x 
+ x  x D8 D11 x 
+ x  x D7 D9  x 
+D10 x  x  x D3 
+D5 D1 D4 D2 D0 
+
+mov 51: el can 6 paso de 21 a 25
+       x       
+   D6     x    
+ x  x  x  P  x 
+ x  x D8 D11 x 
+ x  x D7 D9  x 
+D10 x  x  x D3 
+D5 D1 D4 D2 D0 
+
+mov 52: el can 7 paso de 12 a 7
+       x       
+   D6     x    
+ x  x  x  P  x 
+ x  x D8 D11 x 
+ x  x  x D9  x 
+D10 x D7  x D3 
+D5 D1 D4 D2 D0 
+
+mov 53: el can 3 paso de 9 a 8
+       x       
+   D6     x    
+ x  x  x  P  x 
+ x  x D8 D11 x 
+ x  x  x D9  x 
+D10 x D7 D3  x 
+D5 D1 D4 D2 D0 
+
+mov 54: el can 8 paso de 17 a 12
+       x       
+   D6     x    
+ x  x  x  P  x 
+ x  x  x D11 x 
+ x  x D8 D9  x 
+D10 x D7 D3  x 
+D5 D1 D4 D2 D0 
+
+mov 55: el can 6 paso de 25 a 27
+      D6       
+    x     x    
+ x  x  x  P  x 
+ x  x  x D11 x 
+ x  x D8 D9  x 
+D10 x D7 D3  x 
+D5 D1 D4 D2 D0 
+
+mov 56: el can 11 paso de 18 a 17
+      D6       
+    x     x    
+ x  x  x  P  x 
+ x  x D11 x  x 
+ x  x D8 D9  x 
+D10 x D7 D3  x 
+D5 D1 D4 D2 D0 
+
+mov 57: el puma paso de 23 a 18
+      D6       
+    x     x    
+ x  x  x  x  x 
+ x  x D11 P  x 
+ x  x D8 D9  x 
+D10 x D7 D3  x 
+D5 D1 D4 D2 D0 
+
+mov 58: el can 0 paso de 4 a 9
+      D6       
+    x     x    
+ x  x  x  x  x 
+ x  x D11 P  x 
+ x  x D8 D9  x 
+D10 x D7 D3 D0 
+D5 D1 D4 D2  x 
+
+mov 59: el can 8 paso de 12 a 11
+      D6       
+    x     x    
+ x  x  x  x  x 
+ x  x D11 P  x 
+ x D8  x D9  x 
+D10 x D7 D3 D0 
+D5 D1 D4 D2  x 
+
+mov 60: el can 1 paso de 1 a 6
+      D6       
+    x     x    
+ x  x  x  x  x 
+ x  x D11 P  x 
+ x D8  x D9  x 
+D10D1 D7 D3 D0 
+D5  x D4 D2  x 
+
+mov 61: el can 2 paso de 3 a 4
+      D6       
+    x     x    
+ x  x  x  x  x 
+ x  x D11 P  x 
+ x D8  x D9  x 
+D10D1 D7 D3 D0 
+D5  x D4  x D2 
+
+mov 62: el can 6 paso de 27 a 26
+       x       
+    x    D6    
+ x  x  x  x  x 
+ x  x D11 P  x 
+ x D8  x D9  x 
+D10D1 D7 D3 D0 
+D5  x D4  x D2 
+
+mov 63: el can 1 paso de 6 a 1
+       x       
+    x    D6    
+ x  x  x  x  x 
+ x  x D11 P  x 
+ x D8  x D9  x 
+D10 x D7 D3 D0 
+D5 D1 D4  x D2 
+
+mov 64: el can 8 paso de 11 a 10
+       x       
+    x    D6    
+ x  x  x  x  x 
+ x  x D11 P  x 
+D8  x  x D9  x 
+D10 x D7 D3 D0 
+D5 D1 D4  x D2 
+
+mov 65: el can 11 paso de 17 a 16
+       x       
+    x    D6    
+ x  x  x  x  x 
+ x D11 x  P  x 
+D8  x  x D9  x 
+D10 x D7 D3 D0 
+D5 D1 D4  x D2 
+
+mov 66: el can 9 paso de 13 a 12
+       x       
+    x    D6    
+ x  x  x  x  x 
+ x D11 x  P  x 
+D8  x D9  x  x 
+D10 x D7 D3 D0 
+D5 D1 D4  x D2 
+
+mov 67: el can 3 paso de 8 a 3
+       x       
+    x    D6    
+ x  x  x  x  x 
+ x D11 x  P  x 
+D8  x D9  x  x 
+D10 x D7  x D0 
+D5 D1 D4 D3 D2 
+
+mov 68: el puma paso de 18 a 13
+       x       
+    x    D6    
+ x  x  x  x  x 
+ x D11 x  x  x 
+D8  x D9  P  x 
+D10 x D7  x D0 
+D5 D1 D4 D3 D2 
+
+mov 69: el can 1 paso de 1 a 6
+       x       
+    x    D6    
+ x  x  x  x  x 
+ x D11 x  x  x 
+D8  x D9  P  x 
+D10D1 D7  x D0 
+D5  x D4 D3 D2 
+
+mov 70: el can 0 paso de 9 a 14
+       x       
+    x    D6    
+ x  x  x  x  x 
+ x D11 x  x  x 
+D8  x D9  P D0 
+D10D1 D7  x  x 
+D5  x D4 D3 D2 
+
+mov 71: el puma paso de 13 a 18
+       x       
+    x    D6    
+ x  x  x  x  x 
+ x D11 x  P  x 
+D8  x D9  x D0 
+D10D1 D7  x  x 
+D5  x D4 D3 D2 
+
+mov 72: el can 5 paso de 0 a 1
+       x       
+    x    D6    
+ x  x  x  x  x 
+ x D11 x  P  x 
+D8  x D9  x D0 
+D10D1 D7  x  x 
+ x D5 D4 D3 D2 
+
+mov 73: el can 11 paso de 16 a 21
+       x       
+    x    D6    
+ x D11 x  x  x 
+ x  x  x  P  x 
+D8  x D9  x D0 
+D10D1 D7  x  x 
+ x D5 D4 D3 D2 
+
+mov 74: el can 2 paso de 4 a 9
+       x       
+    x    D6    
+ x D11 x  x  x 
+ x  x  x  P  x 
+D8  x D9  x D0 
+D10D1 D7  x D2 
+ x D5 D4 D3  x 
+
+mov 75: el can 7 paso de 7 a 8
+       x       
+    x    D6    
+ x D11 x  x  x 
+ x  x  x  P  x 
+D8  x D9  x D0 
+D10D1  x D7 D2 
+ x D5 D4 D3  x 
+
+mov 76: el can 6 paso de 26 a 23
+       x       
+    x     x    
+ x D11 x D6  x 
+ x  x  x  P  x 
+D8  x D9  x D0 
+D10D1  x D7 D2 
+ x D5 D4 D3  x 
+
+mov 77: el can 11 paso de 21 a 16
+       x       
+    x     x    
+ x  x  x D6  x 
+ x D11 x  P  x 
+D8  x D9  x D0 
+D10D1  x D7 D2 
+ x D5 D4 D3  x 
+
+mov 78: el can 9 paso de 12 a 7
+       x       
+    x     x    
+ x  x  x D6  x 
+ x D11 x  P  x 
+D8  x  x  x D0 
+D10D1 D9 D7 D2 
+ x D5 D4 D3  x 
+
+mov 79: el can 3 paso de 3 a 4
+       x       
+    x     x    
+ x  x  x D6  x 
+ x D11 x  P  x 
+D8  x  x  x D0 
+D10D1 D9 D7 D2 
+ x D5 D4  x D3 
+
+mov 80: el puma paso de 18 a 19
+       x       
+    x     x    
+ x  x  x D6  x 
+ x D11 x  x  P 
+D8  x  x  x D0 
+D10D1 D9 D7 D2 
+ x D5 D4  x D3 
+
+mov 81: el can 8 paso de 10 a 15
+       x       
+    x     x    
+ x  x  x D6  x 
+D8 D11 x  x  P 
+ x  x  x  x D0 
+D10D1 D9 D7 D2 
+ x D5 D4  x D3 
+
+mov 82: el can 4 paso de 2 a 3
+       x       
+    x     x    
+ x  x  x D6  x 
+D8 D11 x  x  P 
+ x  x  x  x D0 
+D10D1 D9 D7 D2 
+ x D5  x D4 D3 
+
+mov 83: el can 5 paso de 1 a 2
+       x       
+    x     x    
+ x  x  x D6  x 
+D8 D11 x  x  P 
+ x  x  x  x D0 
+D10D1 D9 D7 D2 
+ x  x D5 D4 D3 
+
+mov 84: el can 0 paso de 14 a 13
+       x       
+    x     x    
+ x  x  x D6  x 
+D8 D11 x  x  P 
+ x  x  x D0  x 
+D10D1 D9 D7 D2 
+ x  x D5 D4 D3 
+
+mov 85: el can 11 paso de 16 a 17
+       x       
+    x     x    
+ x  x  x D6  x 
+D8  x D11 x  P 
+ x  x  x D0  x 
+D10D1 D9 D7 D2 
+ x  x D5 D4 D3 
+
+mov 86: el can 6 paso de 23 a 24
+       x       
+    x     x    
+ x  x  x  x D6 
+D8  x D11 x  P 
+ x  x  x D0  x 
+D10D1 D9 D7 D2 
+ x  x D5 D4 D3 
+
+mov 87: el can 10 paso de 5 a 0
+       x       
+    x     x    
+ x  x  x  x D6 
+D8  x D11 x  P 
+ x  x  x D0  x 
+ x D1 D9 D7 D2 
+D10 x D5 D4 D3 
+
+mov 88: el puma paso de 19 a 18
+       x       
+    x     x    
+ x  x  x  x D6 
+D8  x D11 P  x 
+ x  x  x D0  x 
+ x D1 D9 D7 D2 
+D10 x D5 D4 D3 
+
+mov 89: el can 1 paso de 6 a 5
+       x       
+    x     x    
+ x  x  x  x D6 
+D8  x D11 P  x 
+ x  x  x D0  x 
+D1  x D9 D7 D2 
+D10 x D5 D4 D3 
+
+mov 90: el can 5 paso de 2 a 1
+       x       
+    x     x    
+ x  x  x  x D6 
+D8  x D11 P  x 
+ x  x  x D0  x 
+D1  x D9 D7 D2 
+D10D5  x D4 D3 
+
+mov 91: el can 4 paso de 3 a 2
+       x       
+    x     x    
+ x  x  x  x D6 
+D8  x D11 P  x 
+ x  x  x D0  x 
+D1  x D9 D7 D2 
+D10D5 D4  x D3 
+
+mov 92: el can 11 paso de 17 a 22
+       x       
+    x     x    
+ x  x D11 x D6 
+D8  x  x  P  x 
+ x  x  x D0  x 
+D1  x D9 D7 D2 
+D10D5 D4  x D3 
+
+mov 93: el can 9 paso de 7 a 6
+       x       
+    x     x    
+ x  x D11 x D6 
+D8  x  x  P  x 
+ x  x  x D0  x 
+D1 D9  x D7 D2 
+D10D5 D4  x D3 
+
+mov 94: el puma paso de 18 a 19
+       x       
+    x     x    
+ x  x D11 x D6 
+D8  x  x  x  P 
+ x  x  x D0  x 
+D1 D9  x D7 D2 
+D10D5 D4  x D3 
+
+mov 95: el can 2 paso de 9 a 14
+       x       
+    x     x    
+ x  x D11 x D6 
+D8  x  x  x  P 
+ x  x  x D0 D2 
+D1 D9  x D7  x 
+D10D5 D4  x D3 
+
+mov 96: el can 8 paso de 15 a 10
+       x       
+    x     x    
+ x  x D11 x D6 
+ x  x  x  x  P 
+D8  x  x D0 D2 
+D1 D9  x D7  x 
+D10D5 D4  x D3 
+
+mov 97: el can 3 paso de 4 a 9
+       x       
+    x     x    
+ x  x D11 x D6 
+ x  x  x  x  P 
+D8  x  x D0 D2 
+D1 D9  x D7 D3 
+D10D5 D4  x  x 
+
+mov 98: el can 6 paso de 24 a 23
+       x       
+    x     x    
+ x  x D11D6  x 
+ x  x  x  x  P 
+D8  x  x D0 D2 
+D1 D9  x D7 D3 
+D10D5 D4  x  x 
+
+mov 99: el can 7 paso de 8 a 3
+       x       
+    x     x    
+ x  x D11D6  x 
+ x  x  x  x  P 
+D8  x  x D0 D2 
+D1 D9  x  x D3 
+D10D5 D4 D7  x 
+
+mov 100: el can 0 paso de 13 a 18
+       x       
+    x     x    
+ x  x D11D6  x 
+ x  x  x D0  P 
+D8  x  x  x D2 
+D1 D9  x  x D3 
+D10D5 D4 D7  x 
+
+mov 101: el can 7 paso de 3 a 8
+       x       
+    x     x    
+ x  x D11D6  x 
+ x  x  x D0  P 
+D8  x  x  x D2 
+D1 D9  x D7 D3 
+D10D5 D4  x  x 
+
+mov 102: el can 4 paso de 2 a 3
+       x       
+    x     x    
+ x  x D11D6  x 
+ x  x  x D0  P 
+D8  x  x  x D2 
+D1 D9  x D7 D3 
+D10D5  x D4  x 
+
+mov 103: el can 6 paso de 23 a 24
+       x       
+    x     x    
+ x  x D11 x D6 
+ x  x  x D0  P 
+D8  x  x  x D2 
+D1 D9  x D7 D3 
+D10D5  x D4  x 
+
+mov 104: el can 0 paso de 18 a 23
+       x       
+    x     x    
+ x  x D11D0 D6 
+ x  x  x  x  P 
+D8  x  x  x D2 
+D1 D9  x D7 D3 
+D10D5  x D4  x 
+
+mov 105: el can 3 paso de 9 a 4
+       x       
+    x     x    
+ x  x D11D0 D6 
+ x  x  x  x  P 
+D8  x  x  x D2 
+D1 D9  x D7  x 
+D10D5  x D4 D3 
+
+mov 106: el can 8 paso de 10 a 11
+       x       
+    x     x    
+ x  x D11D0 D6 
+ x  x  x  x  P 
+ x D8  x  x D2 
+D1 D9  x D7  x 
+D10D5  x D4 D3 
+
+mov 107: el puma paso de 19 a 18
+       x       
+    x     x    
+ x  x D11D0 D6 
+ x  x  x  P  x 
+ x D8  x  x D2 
+D1 D9  x D7  x 
+D10D5  x D4 D3 
+
+mov 108: el can 11 paso de 22 a 27
+      D11      
+    x     x    
+ x  x  x D0 D6 
+ x  x  x  P  x 
+ x D8  x  x D2 
+D1 D9  x D7  x 
+D10D5  x D4 D3 
+
+mov 109: el can 7 paso de 8 a 13
+      D11      
+    x     x    
+ x  x  x D0 D6 
+ x  x  x  P  x 
+ x D8  x D7 D2 
+D1 D9  x  x  x 
+D10D5  x D4 D3 
+
+mov 110: el can 1 paso de 5 a 10
+      D11      
+    x     x    
+ x  x  x D0 D6 
+ x  x  x  P  x 
+D1 D8  x D7 D2 
+ x D9  x  x  x 
+D10D5  x D4 D3 
+
+mov 111: el can 0 paso de 23 a 26
+      D11      
+    x    D0    
+ x  x  x  x D6 
+ x  x  x  P  x 
+D1 D8  x D7 D2 
+ x D9  x  x  x 
+D10D5  x D4 D3 
+
+mov 112: el can 2 paso de 14 a 19
+      D11      
+    x    D0    
+ x  x  x  x D6 
+ x  x  x  P D2 
+D1 D8  x D7  x 
+ x D9  x  x  x 
+D10D5  x D4 D3 
+
+mov 113: el can 10 paso de 0 a 5
+      D11      
+    x    D0    
+ x  x  x  x D6 
+ x  x  x  P D2 
+D1 D8  x D7  x 
+D10D9  x  x  x 
+ x D5  x D4 D3 
+
+mov 114: el can 5 paso de 1 a 0
+      D11      
+    x    D0    
+ x  x  x  x D6 
+ x  x  x  P D2 
+D1 D8  x D7  x 
+D10D9  x  x  x 
+D5  x  x D4 D3 
+
+mov 115: el can 9 paso de 6 a 7
+      D11      
+    x    D0    
+ x  x  x  x D6 
+ x  x  x  P D2 
+D1 D8  x D7  x 
+D10 x D9  x  x 
+D5  x  x D4 D3 
+
+mov 116: el can 6 paso de 24 a 23
+      D11      
+    x    D0    
+ x  x  x D6  x 
+ x  x  x  P D2 
+D1 D8  x D7  x 
+D10 x D9  x  x 
+D5  x  x D4 D3 
+
+mov 117: el can 0 paso de 26 a 24
+      D11      
+    x     x    
+ x  x  x D6 D0 
+ x  x  x  P D2 
+D1 D8  x D7  x 
+D10 x D9  x  x 
+D5  x  x D4 D3 
+
+mov 118: el can 8 paso de 11 a 12
+      D11      
+    x     x    
+ x  x  x D6 D0 
+ x  x  x  P D2 
+D1  x D8 D7  x 
+D10 x D9  x  x 
+D5  x  x D4 D3 
+
+mov 119: el can 3 paso de 4 a 9
+      D11      
+    x     x    
+ x  x  x D6 D0 
+ x  x  x  P D2 
+D1  x D8 D7  x 
+D10 x D9  x D3 
+D5  x  x D4  x 
+
+mov 120: el can 4 paso de 3 a 8
+      D11      
+    x     x    
+ x  x  x D6 D0 
+ x  x  x  P D2 
+D1  x D8 D7  x 
+D10 x D9 D4 D3 
+D5  x  x  x  x 
+
+mov 121: el can 5 paso de 0 a 1
+      D11      
+    x     x    
+ x  x  x D6 D0 
+ x  x  x  P D2 
+D1  x D8 D7  x 
+D10 x D9 D4 D3 
+ x D5  x  x  x 
+
+mov 122: el can 9 paso de 7 a 2
+      D11      
+    x     x    
+ x  x  x D6 D0 
+ x  x  x  P D2 
+D1  x D8 D7  x 
+D10 x  x D4 D3 
+ x D5 D9  x  x 
+
+mov 123: el can 10 paso de 5 a 0
+      D11      
+    x     x    
+ x  x  x D6 D0 
+ x  x  x  P D2 
+D1  x D8 D7  x 
+ x  x  x D4 D3 
+D10D5 D9  x  x 
+
+mov 124: el can 2 paso de 19 a 14
+      D11      
+    x     x    
+ x  x  x D6 D0 
+ x  x  x  P  x 
+D1  x D8 D7 D2 
+ x  x  x D4 D3 
+D10D5 D9  x  x 
+
+mov 125: el puma paso de 18 a 17
+      D11      
+    x     x    
+ x  x  x D6 D0 
+ x  x  P  x  x 
+D1  x D8 D7 D2 
+ x  x  x D4 D3 
+D10D5 D9  x  x 
+
+mov 126: el can 11 paso de 27 a 26
+       x       
+    x    D11   
+ x  x  x D6 D0 
+ x  x  P  x  x 
+D1  x D8 D7 D2 
+ x  x  x D4 D3 
+D10D5 D9  x  x 
+
+mov 127: el can 3 paso de 9 a 4
+       x       
+    x    D11   
+ x  x  x D6 D0 
+ x  x  P  x  x 
+D1  x D8 D7 D2 
+ x  x  x D4  x 
+D10D5 D9  x D3 
+
+mov 128: el can 9 paso de 2 a 7
+       x       
+    x    D11   
+ x  x  x D6 D0 
+ x  x  P  x  x 
+D1  x D8 D7 D2 
+ x  x D9 D4  x 
+D10D5  x  x D3 
+
+mov 129: el can 4 paso de 8 a 3
+       x       
+    x    D11   
+ x  x  x D6 D0 
+ x  x  P  x  x 
+D1  x D8 D7 D2 
+ x  x D9  x  x 
+D10D5  x D4 D3 
+
+mov 130: el can 7 paso de 13 a 18
+       x       
+    x    D11   
+ x  x  x D6 D0 
+ x  x  P D7  x 
+D1  x D8  x D2 
+ x  x D9  x  x 
+D10D5  x D4 D3 
+
+mov 131: el can 1 paso de 10 a 11
+       x       
+    x    D11   
+ x  x  x D6 D0 
+ x  x  P D7  x 
+ x D1 D8  x D2 
+ x  x D9  x  x 
+D10D5  x D4 D3 
+
+mov 132: el can 6 paso de 23 a 22
+       x       
+    x    D11   
+ x  x D6  x D0 
+ x  x  P D7  x 
+ x D1 D8  x D2 
+ x  x D9  x  x 
+D10D5  x D4 D3 
+
+mov 133: el can 0 paso de 24 a 23
+       x       
+    x    D11   
+ x  x D6 D0  x 
+ x  x  P D7  x 
+ x D1 D8  x D2 
+ x  x D9  x  x 
+D10D5  x D4 D3 
+
+mov 134: el can 10 paso de 0 a 5
+       x       
+    x    D11   
+ x  x D6 D0  x 
+ x  x  P D7  x 
+ x D1 D8  x D2 
+D10 x D9  x  x 
+ x D5  x D4 D3 
+
+mov 135: el puma paso de 17 a 16
+       x       
+    x    D11   
+ x  x D6 D0  x 
+ x  P  x D7  x 
+ x D1 D8  x D2 
+D10 x D9  x  x 
+ x D5  x D4 D3 
+
+mov 136: el can 2 paso de 14 a 9
+       x       
+    x    D11   
+ x  x D6 D0  x 
+ x  P  x D7  x 
+ x D1 D8  x  x 
+D10 x D9  x D2 
+ x D5  x D4 D3 
+
+mov 137: el can 11 paso de 26 a 27
+      D11      
+    x     x    
+ x  x D6 D0  x 
+ x  P  x D7  x 
+ x D1 D8  x  x 
+D10 x D9  x D2 
+ x D5  x D4 D3 
+
+mov 138: el can 7 paso de 18 a 13
+      D11      
+    x     x    
+ x  x D6 D0  x 
+ x  P  x  x  x 
+ x D1 D8 D7  x 
+D10 x D9  x D2 
+ x D5  x D4 D3 
+
+mov 139: el can 4 paso de 3 a 2
+      D11      
+    x     x    
+ x  x D6 D0  x 
+ x  P  x  x  x 
+ x D1 D8 D7  x 
+D10 x D9  x D2 
+ x D5 D4  x D3 
+
+mov 140: el can 6 paso de 22 a 17
+      D11      
+    x     x    
+ x  x  x D0  x 
+ x  P D6  x  x 
+ x D1 D8 D7  x 
+D10 x D9  x D2 
+ x D5 D4  x D3 
+
+mov 141: el can 1 paso de 11 a 6
+      D11      
+    x     x    
+ x  x  x D0  x 
+ x  P D6  x  x 
+ x  x D8 D7  x 
+D10D1 D9  x D2 
+ x D5 D4  x D3 
+
+mov 142: el can 6 paso de 17 a 22
+      D11      
+    x     x    
+ x  x D6 D0  x 
+ x  P  x  x  x 
+ x  x D8 D7  x 
+D10D1 D9  x D2 
+ x D5 D4  x D3 
+
+mov 143: el can 7 paso de 13 a 8
+      D11      
+    x     x    
+ x  x D6 D0  x 
+ x  P  x  x  x 
+ x  x D8  x  x 
+D10D1 D9 D7 D2 
+ x D5 D4  x D3 
+
+mov 144: el can 5 paso de 1 a 0
+      D11      
+    x     x    
+ x  x D6 D0  x 
+ x  P  x  x  x 
+ x  x D8  x  x 
+D10D1 D9 D7 D2 
+D5  x D4  x D3 
+
+mov 145: el can 0 paso de 23 a 18
+      D11      
+    x     x    
+ x  x D6  x  x 
+ x  P  x D0  x 
+ x  x D8  x  x 
+D10D1 D9 D7 D2 
+D5  x D4  x D3 
+
+mov 146: el can 3 paso de 4 a 3
+      D11      
+    x     x    
+ x  x D6  x  x 
+ x  P  x D0  x 
+ x  x D8  x  x 
+D10D1 D9 D7 D2 
+D5  x D4 D3  x 
+
+mov 147: el can 1 paso de 6 a 1
+      D11      
+    x     x    
+ x  x D6  x  x 
+ x  P  x D0  x 
+ x  x D8  x  x 
+D10 x D9 D7 D2 
+D5 D1 D4 D3  x 
+
+mov 148: el can 8 paso de 12 a 17
+      D11      
+    x     x    
+ x  x D6  x  x 
+ x  P D8 D0  x 
+ x  x  x  x  x 
+D10 x D9 D7 D2 
+D5 D1 D4 D3  x 
+
+mov 149: el can 2 paso de 9 a 14
+      D11      
+    x     x    
+ x  x D6  x  x 
+ x  P D8 D0  x 
+ x  x  x  x D2 
+D10 x D9 D7  x 
+D5 D1 D4 D3  x 
+
+mov 150: el can 11 paso de 27 a 26
+       x       
+    x    D11   
+ x  x D6  x  x 
+ x  P D8 D0  x 
+ x  x  x  x D2 
+D10 x D9 D7  x 
+D5 D1 D4 D3  x 
+
+mov 151: el puma paso de 16 a 15
+       x       
+    x    D11   
+ x  x D6  x  x 
+ P  x D8 D0  x 
+ x  x  x  x D2 
+D10 x D9 D7  x 
+D5 D1 D4 D3  x 
+
+mov 152: el can 7 paso de 8 a 9
+       x       
+    x    D11   
+ x  x D6  x  x 
+ P  x D8 D0  x 
+ x  x  x  x D2 
+D10 x D9  x D7 
+D5 D1 D4 D3  x 
+
+mov 153: el can 6 paso de 22 a 27
+      D6       
+    x    D11   
+ x  x  x  x  x 
+ P  x D8 D0  x 
+ x  x  x  x D2 
+D10 x D9  x D7 
+D5 D1 D4 D3  x 
+
+mov 154: el can 2 paso de 14 a 19
+      D6       
+    x    D11   
+ x  x  x  x  x 
+ P  x D8 D0 D2 
+ x  x  x  x  x 
+D10 x D9  x D7 
+D5 D1 D4 D3  x 
+
+mov 155: el can 9 paso de 7 a 6
+      D6       
+    x    D11   
+ x  x  x  x  x 
+ P  x D8 D0 D2 
+ x  x  x  x  x 
+D10D9  x  x D7 
+D5 D1 D4 D3  x 
+
+mov 156: el can 8 paso de 17 a 16
+      D6       
+    x    D11   
+ x  x  x  x  x 
+ P D8  x D0 D2 
+ x  x  x  x  x 
+D10D9  x  x D7 
+D5 D1 D4 D3  x 
+
+mov 157: el can 3 paso de 3 a 4
+      D6       
+    x    D11   
+ x  x  x  x  x 
+ P D8  x D0 D2 
+ x  x  x  x  x 
+D10D9  x  x D7 
+D5 D1 D4  x D3 
+
+mov 158: el can 9 paso de 6 a 7
+      D6       
+    x    D11   
+ x  x  x  x  x 
+ P D8  x D0 D2 
+ x  x  x  x  x 
+D10 x D9  x D7 
+D5 D1 D4  x D3 
+
+mov 159: el can 11 paso de 26 a 24
+      D6       
+    x     x    
+ x  x  x  x D11
+ P D8  x D0 D2 
+ x  x  x  x  x 
+D10 x D9  x D7 
+D5 D1 D4  x D3 
+
+mov 160: el can 10 paso de 5 a 6
+      D6       
+    x     x    
+ x  x  x  x D11
+ P D8  x D0 D2 
+ x  x  x  x  x 
+ x D10D9  x D7 
+D5 D1 D4  x D3 
+
+mov 161: el can 7 paso de 9 a 8
+      D6       
+    x     x    
+ x  x  x  x D11
+ P D8  x D0 D2 
+ x  x  x  x  x 
+ x D10D9 D7  x 
+D5 D1 D4  x D3 
+
+mov 162: el can 8 paso de 16 a 17
+      D6       
+    x     x    
+ x  x  x  x D11
+ P  x D8 D0 D2 
+ x  x  x  x  x 
+ x D10D9 D7  x 
+D5 D1 D4  x D3 
+
+mov 163: el can 2 paso de 19 a 14
+      D6       
+    x     x    
+ x  x  x  x D11
+ P  x D8 D0  x 
+ x  x  x  x D2 
+ x D10D9 D7  x 
+D5 D1 D4  x D3 
+
+mov 164: el can 4 paso de 2 a 3
+      D6       
+    x     x    
+ x  x  x  x D11
+ P  x D8 D0  x 
+ x  x  x  x D2 
+ x D10D9 D7  x 
+D5 D1  x D4 D3 
+
+mov 165: el can 0 paso de 18 a 23
+      D6       
+    x     x    
+ x  x  x D0 D11
+ P  x D8  x  x 
+ x  x  x  x D2 
+ x D10D9 D7  x 
+D5 D1  x D4 D3 
+
+mov 166: el can 9 paso de 7 a 12
+      D6       
+    x     x    
+ x  x  x D0 D11
+ P  x D8  x  x 
+ x  x D9  x D2 
+ x D10 x D7  x 
+D5 D1  x D4 D3 
+
+mov 167: el puma paso de 15 a 20
+      D6       
+    x     x    
+ P  x  x D0 D11
+ x  x D8  x  x 
+ x  x D9  x D2 
+ x D10 x D7  x 
+D5 D1  x D4 D3 
+
+mov 168: el can 4 paso de 3 a 2
+      D6       
+    x     x    
+ P  x  x D0 D11
+ x  x D8  x  x 
+ x  x D9  x D2 
+ x D10 x D7  x 
+D5 D1 D4  x D3 
+
+mov 169: el can 8 paso de 17 a 18
+      D6       
+    x     x    
+ P  x  x D0 D11
+ x  x  x D8  x 
+ x  x D9  x D2 
+ x D10 x D7  x 
+D5 D1 D4  x D3 
+
+mov 170: el can 0 paso de 23 a 22
+      D6       
+    x     x    
+ P  x D0  x D11
+ x  x  x D8  x 
+ x  x D9  x D2 
+ x D10 x D7  x 
+D5 D1 D4  x D3 
+
+mov 171: el can 3 paso de 4 a 3
+      D6       
+    x     x    
+ P  x D0  x D11
+ x  x  x D8  x 
+ x  x D9  x D2 
+ x D10 x D7  x 
+D5 D1 D4 D3  x 
+
+mov 172: el can 10 paso de 6 a 5
+      D6       
+    x     x    
+ P  x D0  x D11
+ x  x  x D8  x 
+ x  x D9  x D2 
+D10 x  x D7  x 
+D5 D1 D4 D3  x 
+
+mov 173: el can 2 paso de 14 a 13
+      D6       
+    x     x    
+ P  x D0  x D11
+ x  x  x D8  x 
+ x  x D9 D2  x 
+D10 x  x D7  x 
+D5 D1 D4 D3  x 
+
+mov 174: el can 11 paso de 24 a 23
+      D6       
+    x     x    
+ P  x D0 D11 x 
+ x  x  x D8  x 
+ x  x D9 D2  x 
+D10 x  x D7  x 
+D5 D1 D4 D3  x 
+
+mov 175: el can 4 paso de 2 a 7
+      D6       
+    x     x    
+ P  x D0 D11 x 
+ x  x  x D8  x 
+ x  x D9 D2  x 
+D10 x D4 D7  x 
+D5 D1  x D3  x 
+
+mov 176: el can 6 paso de 27 a 25
+       x       
+   D6     x    
+ P  x D0 D11 x 
+ x  x  x D8  x 
+ x  x D9 D2  x 
+D10 x D4 D7  x 
+D5 D1  x D3  x 
+
+mov 177: el can 9 paso de 12 a 17
+       x       
+   D6     x    
+ P  x D0 D11 x 
+ x  x D9 D8  x 
+ x  x  x D2  x 
+D10 x D4 D7  x 
+D5 D1  x D3  x 
+
+mov 178: el puma salto de 20 a 27 y se comio al perro 6
+       P       
+    x     x    
+ x  x D0 D11 x 
+ x  x D9 D8  x 
+ x  x  x D2  x 
+D10 x D4 D7  x 
+D5 D1  x D3  x 
+
+mov 179: el can 1 paso de 1 a 2
+       P       
+    x     x    
+ x  x D0 D11 x 
+ x  x D9 D8  x 
+ x  x  x D2  x 
+D10 x D4 D7  x 
+D5  x D1 D3  x 
+
+mov 180: el can 4 paso de 7 a 12
+       P       
+    x     x    
+ x  x D0 D11 x 
+ x  x D9 D8  x 
+ x  x D4 D2  x 
+D10 x  x D7  x 
+D5  x D1 D3  x 
+
+mov 181: el can 2 paso de 13 a 14
+       P       
+    x     x    
+ x  x D0 D11 x 
+ x  x D9 D8  x 
+ x  x D4  x D2 
+D10 x  x D7  x 
+D5  x D1 D3  x 
+
+mov 182: el can 10 paso de 5 a 10
+       P       
+    x     x    
+ x  x D0 D11 x 
+ x  x D9 D8  x 
+D10 x D4  x D2 
+ x  x  x D7  x 
+D5  x D1 D3  x 
+
+mov 183: el can 5 paso de 0 a 5
+       P       
+    x     x    
+ x  x D0 D11 x 
+ x  x D9 D8  x 
+D10 x D4  x D2 
+D5  x  x D7  x 
+ x  x D1 D3  x 
+
+mov 184: el can 7 paso de 8 a 13
+       P       
+    x     x    
+ x  x D0 D11 x 
+ x  x D9 D8  x 
+D10 x D4 D7 D2 
+D5  x  x  x  x 
+ x  x D1 D3  x 
+
+mov 185: el can 3 paso de 3 a 4
+       P       
+    x     x    
+ x  x D0 D11 x 
+ x  x D9 D8  x 
+D10 x D4 D7 D2 
+D5  x  x  x  x 
+ x  x D1  x D3 
+
+mov 186: el can 1 paso de 2 a 1
+       P       
+    x     x    
+ x  x D0 D11 x 
+ x  x D9 D8  x 
+D10 x D4 D7 D2 
+D5  x  x  x  x 
+ x D1  x  x D3 
+
+mov 187: el can 2 paso de 14 a 19
+       P       
+    x     x    
+ x  x D0 D11 x 
+ x  x D9 D8 D2 
+D10 x D4 D7  x 
+D5  x  x  x  x 
+ x D1  x  x D3 
+
+mov 188: el can 4 paso de 12 a 7
+       P       
+    x     x    
+ x  x D0 D11 x 
+ x  x D9 D8 D2 
+D10 x  x D7  x 
+D5  x D4  x  x 
+ x D1  x  x D3 
+
+mov 189: el puma paso de 27 a 25
+       x       
+    P     x    
+ x  x D0 D11 x 
+ x  x D9 D8 D2 
+D10 x  x D7  x 
+D5  x D4  x  x 
+ x D1  x  x D3 
+
+mov 190: el can 7 paso de 13 a 14
+       x       
+    P     x    
+ x  x D0 D11 x 
+ x  x D9 D8 D2 
+D10 x  x  x D7 
+D5  x D4  x  x 
+ x D1  x  x D3 
+
+mov 191: el can 9 paso de 17 a 16
+       x       
+    P     x    
+ x  x D0 D11 x 
+ x D9  x D8 D2 
+D10 x  x  x D7 
+D5  x D4  x  x 
+ x D1  x  x D3 
+
+mov 192: el can 10 paso de 10 a 11
+       x       
+    P     x    
+ x  x D0 D11 x 
+ x D9  x D8 D2 
+ x D10 x  x D7 
+D5  x D4  x  x 
+ x D1  x  x D3 
+
+mov 193: el can 3 paso de 4 a 9
+       x       
+    P     x    
+ x  x D0 D11 x 
+ x D9  x D8 D2 
+ x D10 x  x D7 
+D5  x D4  x D3 
+ x D1  x  x  x 
+
+mov 194: el can 8 paso de 18 a 13
+       x       
+    P     x    
+ x  x D0 D11 x 
+ x D9  x  x D2 
+ x D10 x D8 D7 
+D5  x D4  x D3 
+ x D1  x  x  x 
+
+mov 195: el can 0 paso de 22 a 17
+       x       
+    P     x    
+ x  x  x D11 x 
+ x D9 D0  x D2 
+ x D10 x D8 D7 
+D5  x D4  x D3 
+ x D1  x  x  x 
+
+mov 196: el can 3 paso de 9 a 8
+       x       
+    P     x    
+ x  x  x D11 x 
+ x D9 D0  x D2 
+ x D10 x D8 D7 
+D5  x D4 D3  x 
+ x D1  x  x  x 
+
+mov 197: el can 5 paso de 5 a 10
+       x       
+    P     x    
+ x  x  x D11 x 
+ x D9 D0  x D2 
+D5 D10 x D8 D7 
+ x  x D4 D3  x 
+ x D1  x  x  x 
+
+mov 198: el can 7 paso de 14 a 9
+       x       
+    P     x    
+ x  x  x D11 x 
+ x D9 D0  x D2 
+D5 D10 x D8  x 
+ x  x D4 D3 D7 
+ x D1  x  x  x 
+
+mov 199: el can 11 paso de 23 a 22
+       x       
+    P     x    
+ x  x D11 x  x 
+ x D9 D0  x D2 
+D5 D10 x D8  x 
+ x  x D4 D3 D7 
+ x D1  x  x  x 
+
+mov 200: el can 2 paso de 19 a 24
+       x       
+    P     x    
+ x  x D11 x D2 
+ x D9 D0  x  x 
+D5 D10 x D8  x 
+ x  x D4 D3 D7 
+ x D1  x  x  x 
+
+mov 201: el can 9 paso de 16 a 15
+       x       
+    P     x    
+ x  x D11 x D2 
+D9  x D0  x  x 
+D5 D10 x D8  x 
+ x  x D4 D3 D7 
+ x D1  x  x  x 
+
+mov 202: el can 1 paso de 1 a 2
+       x       
+    P     x    
+ x  x D11 x D2 
+D9  x D0  x  x 
+D5 D10 x D8  x 
+ x  x D4 D3 D7 
+ x  x D1  x  x 
+
+mov 203: el puma paso de 25 a 20
+       x       
+    x     x    
+ P  x D11 x D2 
+D9  x D0  x  x 
+D5 D10 x D8  x 
+ x  x D4 D3 D7 
+ x  x D1  x  x 
+
+mov 204: el can 2 paso de 24 a 19
+       x       
+    x     x    
+ P  x D11 x  x 
+D9  x D0  x D2 
+D5 D10 x D8  x 
+ x  x D4 D3 D7 
+ x  x D1  x  x 
+
+mov 205: el can 0 paso de 17 a 16
+       x       
+    x     x    
+ P  x D11 x  x 
+D9 D0  x  x D2 
+D5 D10 x D8  x 
+ x  x D4 D3 D7 
+ x  x D1  x  x 
+
+mov 206: el can 8 paso de 13 a 18
+       x       
+    x     x    
+ P  x D11 x  x 
+D9 D0  x D8 D2 
+D5 D10 x  x  x 
+ x  x D4 D3 D7 
+ x  x D1  x  x 
+
+mov 207: el can 11 paso de 22 a 17
+       x       
+    x     x    
+ P  x  x  x  x 
+D9 D0 D11D8 D2 
+D5 D10 x  x  x 
+ x  x D4 D3 D7 
+ x  x D1  x  x 
+
+mov 208: el can 4 paso de 7 a 12
+       x       
+    x     x    
+ P  x  x  x  x 
+D9 D0 D11D8 D2 
+D5 D10D4  x  x 
+ x  x  x D3 D7 
+ x  x D1  x  x 
+
+mov 209: el can 5 paso de 10 a 5
+       x       
+    x     x    
+ P  x  x  x  x 
+D9 D0 D11D8 D2 
+ x D10D4  x  x 
+D5  x  x D3 D7 
+ x  x D1  x  x 
+
+mov 210: el can 2 paso de 19 a 14
+       x       
+    x     x    
+ P  x  x  x  x 
+D9 D0 D11D8  x 
+ x D10D4  x D2 
+D5  x  x D3 D7 
+ x  x D1  x  x 
+
+mov 211: el can 10 paso de 11 a 10
+       x       
+    x     x    
+ P  x  x  x  x 
+D9 D0 D11D8  x 
+D10 x D4  x D2 
+D5  x  x D3 D7 
+ x  x D1  x  x 
+
+mov 212: el can 3 paso de 8 a 13
+       x       
+    x     x    
+ P  x  x  x  x 
+D9 D0 D11D8  x 
+D10 x D4 D3 D2 
+D5  x  x  x D7 
+ x  x D1  x  x 
+
+mov 213: el can 7 paso de 9 a 4
+       x       
+    x     x    
+ P  x  x  x  x 
+D9 D0 D11D8  x 
+D10 x D4 D3 D2 
+D5  x  x  x  x 
+ x  x D1  x D7 
+
+mov 214: el can 11 paso de 17 a 22
+       x       
+    x     x    
+ P  x D11 x  x 
+D9 D0  x D8  x 
+D10 x D4 D3 D2 
+D5  x  x  x  x 
+ x  x D1  x D7 
+
+mov 215: el can 1 paso de 2 a 7
+       x       
+    x     x    
+ P  x D11 x  x 
+D9 D0  x D8  x 
+D10 x D4 D3 D2 
+D5  x D1  x  x 
+ x  x  x  x D7 
+
+mov 216: el puma paso de 20 a 25
+       x       
+    P     x    
+ x  x D11 x  x 
+D9 D0  x D8  x 
+D10 x D4 D3 D2 
+D5  x D1  x  x 
+ x  x  x  x D7 
+
+mov 217: el can 8 paso de 18 a 19
+       x       
+    P     x    
+ x  x D11 x  x 
+D9 D0  x  x D8 
+D10 x D4 D3 D2 
+D5  x D1  x  x 
+ x  x  x  x D7 
+
+mov 218: el can 0 paso de 16 a 21
+       x       
+    P     x    
+ x D0 D11 x  x 
+D9  x  x  x D8 
+D10 x D4 D3 D2 
+D5  x D1  x  x 
+ x  x  x  x D7 
+
+mov 219: el can 4 paso de 12 a 11
+       x       
+    P     x    
+ x D0 D11 x  x 
+D9  x  x  x D8 
+D10D4  x D3 D2 
+D5  x D1  x  x 
+ x  x  x  x D7 
+
+mov 220: el can 2 paso de 14 a 9
+       x       
+    P     x    
+ x D0 D11 x  x 
+D9  x  x  x D8 
+D10D4  x D3  x 
+D5  x D1  x D2 
+ x  x  x  x D7 
+
+mov 221: el can 5 paso de 5 a 6
+       x       
+    P     x    
+ x D0 D11 x  x 
+D9  x  x  x D8 
+D10D4  x D3  x 
+ x D5 D1  x D2 
+ x  x  x  x D7 
+
+mov 222: el can 0 paso de 21 a 16
+       x       
+    P     x    
+ x  x D11 x  x 
+D9 D0  x  x D8 
+D10D4  x D3  x 
+ x D5 D1  x D2 
+ x  x  x  x D7 
+
+mov 223: el can 9 paso de 15 a 20
+       x       
+    P     x    
+D9  x D11 x  x 
+ x D0  x  x D8 
+D10D4  x D3  x 
+ x D5 D1  x D2 
+ x  x  x  x D7 
+
+mov 224: el can 3 paso de 13 a 12
+       x       
+    P     x    
+D9  x D11 x  x 
+ x D0  x  x D8 
+D10D4 D3  x  x 
+ x D5 D1  x D2 
+ x  x  x  x D7 
+
+mov 225: el can 11 paso de 22 a 27
+      D11      
+    P     x    
+D9  x  x  x  x 
+ x D0  x  x D8 
+D10D4 D3  x  x 
+ x D5 D1  x D2 
+ x  x  x  x D7 
+
+mov 226: el can 0 paso de 16 a 21
+      D11      
+    P     x    
+D9 D0  x  x  x 
+ x  x  x  x D8 
+D10D4 D3  x  x 
+ x D5 D1  x D2 
+ x  x  x  x D7 
+
+mov 227: el can 7 paso de 4 a 3
+      D11      
+    P     x    
+D9 D0  x  x  x 
+ x  x  x  x D8 
+D10D4 D3  x  x 
+ x D5 D1  x D2 
+ x  x  x D7  x 
+
+mov 228: el can 8 paso de 19 a 18
+      D11      
+    P     x    
+D9 D0  x  x  x 
+ x  x  x D8  x 
+D10D4 D3  x  x 
+ x D5 D1  x D2 
+ x  x  x D7  x 
+
+mov 229: el can 1 paso de 7 a 8
+      D11      
+    P     x    
+D9 D0  x  x  x 
+ x  x  x D8  x 
+D10D4 D3  x  x 
+ x D5  x D1 D2 
+ x  x  x D7  x 
+
+mov 230: el can 3 paso de 12 a 7
+      D11      
+    P     x    
+D9 D0  x  x  x 
+ x  x  x D8  x 
+D10D4  x  x  x 
+ x D5 D3 D1 D2 
+ x  x  x D7  x 
+
+mov 231: el can 10 paso de 10 a 15
+      D11      
+    P     x    
+D9 D0  x  x  x 
+D10 x  x D8  x 
+ x D4  x  x  x 
+ x D5 D3 D1 D2 
+ x  x  x D7  x 
+
+mov 232: el can 5 paso de 6 a 5
+      D11      
+    P     x    
+D9 D0  x  x  x 
+D10 x  x D8  x 
+ x D4  x  x  x 
+D5  x D3 D1 D2 
+ x  x  x D7  x 
+
+mov 233: el can 2 paso de 9 a 4
+      D11      
+    P     x    
+D9 D0  x  x  x 
+D10 x  x D8  x 
+ x D4  x  x  x 
+D5  x D3 D1  x 
+ x  x  x D7 D2 
+
+mov 234: el can 11 paso de 27 a 22
+       x       
+    P     x    
+D9 D0 D11 x  x 
+D10 x  x D8  x 
+ x D4  x  x  x 
+D5  x D3 D1  x 
+ x  x  x D7 D2 
+
+mov 235: el puma salto de 25 a 16 y se comio al perro 0
+       x       
+    x     x    
+D9  x D11 x  x 
+D10 P  x D8  x 
+ x D4  x  x  x 
+D5  x D3 D1  x 
+ x  x  x D7 D2 
+
+mov 236: el can 5 paso de 5 a 10
+       x       
+    x     x    
+D9  x D11 x  x 
+D10 P  x D8  x 
+D5 D4  x  x  x 
+ x  x D3 D1  x 
+ x  x  x D7 D2 
+
+mov 237: el can 8 paso de 18 a 19
+       x       
+    x     x    
+D9  x D11 x  x 
+D10 P  x  x D8 
+D5 D4  x  x  x 
+ x  x D3 D1  x 
+ x  x  x D7 D2 
+
+mov 238: el can 7 paso de 3 a 2
+       x       
+    x     x    
+D9  x D11 x  x 
+D10 P  x  x D8 
+D5 D4  x  x  x 
+ x  x D3 D1  x 
+ x  x D7  x D2 
+
+mov 239: el can 4 paso de 11 a 6
+       x       
+    x     x    
+D9  x D11 x  x 
+D10 P  x  x D8 
+D5  x  x  x  x 
+ x D4 D3 D1  x 
+ x  x D7  x D2 
+
+mov 240: el can 3 paso de 7 a 12
+       x       
+    x     x    
+D9  x D11 x  x 
+D10 P  x  x D8 
+D5  x D3  x  x 
+ x D4  x D1  x 
+ x  x D7  x D2 
+
+mov 241: el can 1 paso de 8 a 9
+       x       
+    x     x    
+D9  x D11 x  x 
+D10 P  x  x D8 
+D5  x D3  x  x 
+ x D4  x  x D1 
+ x  x D7  x D2 
+
+mov 242: el can 3 paso de 12 a 13
+       x       
+    x     x    
+D9  x D11 x  x 
+D10 P  x  x D8 
+D5  x  x D3  x 
+ x D4  x  x D1 
+ x  x D7  x D2 
+
+mov 243: el puma paso de 16 a 21
+       x       
+    x     x    
+D9  P D11 x  x 
+D10 x  x  x D8 
+D5  x  x D3  x 
+ x D4  x  x D1 
+ x  x D7  x D2 
+
+mov 244: el can 8 paso de 19 a 18
+       x       
+    x     x    
+D9  P D11 x  x 
+D10 x  x D8  x 
+D5  x  x D3  x 
+ x D4  x  x D1 
+ x  x D7  x D2 
+
+mov 245: el can 2 paso de 4 a 3
+       x       
+    x     x    
+D9  P D11 x  x 
+D10 x  x D8  x 
+D5  x  x D3  x 
+ x D4  x  x D1 
+ x  x D7 D2  x 
+
+mov 246: el can 11 paso de 22 a 27
+      D11      
+    x     x    
+D9  P  x  x  x 
+D10 x  x D8  x 
+D5  x  x D3  x 
+ x D4  x  x D1 
+ x  x D7 D2  x 
+
+mov 247: el can 7 paso de 2 a 1
+      D11      
+    x     x    
+D9  P  x  x  x 
+D10 x  x D8  x 
+D5  x  x D3  x 
+ x D4  x  x D1 
+ x D7  x D2  x 
+
+mov 248: el can 9 paso de 20 a 25
+      D11      
+   D9     x    
+ x  P  x  x  x 
+D10 x  x D8  x 
+D5  x  x D3  x 
+ x D4  x  x D1 
+ x D7  x D2  x 
+
+mov 249: el can 10 paso de 15 a 20
+      D11      
+   D9     x    
+D10 P  x  x  x 
+ x  x  x D8  x 
+D5  x  x D3  x 
+ x D4  x  x D1 
+ x D7  x D2  x 
+
+mov 250: el can 1 paso de 9 a 4
+      D11      
+   D9     x    
+D10 P  x  x  x 
+ x  x  x D8  x 
+D5  x  x D3  x 
+ x D4  x  x  x 
+ x D7  x D2 D1 
+
+mov 251: el can 5 paso de 10 a 11
+      D11      
+   D9     x    
+D10 P  x  x  x 
+ x  x  x D8  x 
+ x D5  x D3  x 
+ x D4  x  x  x 
+ x D7  x D2 D1 
+
+mov 252: el can 4 paso de 6 a 7
+      D11      
+   D9     x    
+D10 P  x  x  x 
+ x  x  x D8  x 
+ x D5  x D3  x 
+ x  x D4  x  x 
+ x D7  x D2 D1 
+
+mov 253: el puma paso de 21 a 22
+      D11      
+   D9     x    
+D10 x  P  x  x 
+ x  x  x D8  x 
+ x D5  x D3  x 
+ x  x D4  x  x 
+ x D7  x D2 D1 
+
+mov 254: el can 1 paso de 4 a 9
+      D11      
+   D9     x    
+D10 x  P  x  x 
+ x  x  x D8  x 
+ x D5  x D3  x 
+ x  x D4  x D1 
+ x D7  x D2  x 
+
+mov 255: el can 3 paso de 13 a 14
+      D11      
+   D9     x    
+D10 x  P  x  x 
+ x  x  x D8  x 
+ x D5  x  x D3 
+ x  x D4  x D1 
+ x D7  x D2  x 
+
+mov 256: el puma paso de 22 a 23
+      D11      
+   D9     x    
+D10 x  x  P  x 
+ x  x  x D8  x 
+ x D5  x  x D3 
+ x  x D4  x D1 
+ x D7  x D2  x 
+
+mov 257: el can 2 paso de 3 a 8
+      D11      
+   D9     x    
+D10 x  x  P  x 
+ x  x  x D8  x 
+ x D5  x  x D3 
+ x  x D4 D2 D1 
+ x D7  x  x  x 
+
+mov 258: el can 10 paso de 20 a 21
+      D11      
+   D9     x    
+ x D10 x  P  x 
+ x  x  x D8  x 
+ x D5  x  x D3 
+ x  x D4 D2 D1 
+ x D7  x  x  x 
+
+mov 259: el can 1 paso de 9 a 4
+      D11      
+   D9     x    
+ x D10 x  P  x 
+ x  x  x D8  x 
+ x D5  x  x D3 
+ x  x D4 D2  x 
+ x D7  x  x D1 
+
+mov 260: el can 2 paso de 8 a 13
+      D11      
+   D9     x    
+ x D10 x  P  x 
+ x  x  x D8  x 
+ x D5  x D2 D3 
+ x  x D4  x  x 
+ x D7  x  x D1 
+
+mov 261: el can 11 paso de 27 a 26
+       x       
+   D9    D11   
+ x D10 x  P  x 
+ x  x  x D8  x 
+ x D5  x D2 D3 
+ x  x D4  x  x 
+ x D7  x  x D1 
+
+mov 262: el can 3 paso de 14 a 9
+       x       
+   D9    D11   
+ x D10 x  P  x 
+ x  x  x D8  x 
+ x D5  x D2  x 
+ x  x D4  x D3 
+ x D7  x  x D1 
+
+mov 263: el can 8 paso de 18 a 17
+       x       
+   D9    D11   
+ x D10 x  P  x 
+ x  x D8  x  x 
+ x D5  x D2  x 
+ x  x D4  x D3 
+ x D7  x  x D1 
+
+mov 264: el can 5 paso de 11 a 16
+       x       
+   D9    D11   
+ x D10 x  P  x 
+ x D5 D8  x  x 
+ x  x  x D2  x 
+ x  x D4  x D3 
+ x D7  x  x D1 
+
+mov 265: el can 9 paso de 25 a 20
+       x       
+    x    D11   
+D9 D10 x  P  x 
+ x D5 D8  x  x 
+ x  x  x D2  x 
+ x  x D4  x D3 
+ x D7  x  x D1 
+
+mov 266: el can 1 paso de 4 a 3
+       x       
+    x    D11   
+D9 D10 x  P  x 
+ x D5 D8  x  x 
+ x  x  x D2  x 
+ x  x D4  x D3 
+ x D7  x D1  x 
+
+mov 267: el can 7 paso de 1 a 2
+       x       
+    x    D11   
+D9 D10 x  P  x 
+ x D5 D8  x  x 
+ x  x  x D2  x 
+ x  x D4  x D3 
+ x  x D7 D1  x 
+
+mov 268: el can 4 paso de 7 a 12
+       x       
+    x    D11   
+D9 D10 x  P  x 
+ x D5 D8  x  x 
+ x  x D4 D2  x 
+ x  x  x  x D3 
+ x  x D7 D1  x 
+
+mov 269: el can 10 paso de 21 a 25
+       x       
+   D10   D11   
+D9  x  x  P  x 
+ x D5 D8  x  x 
+ x  x D4 D2  x 
+ x  x  x  x D3 
+ x  x D7 D1  x 
+
+mov 270: el can 4 paso de 12 a 7
+       x       
+   D10   D11   
+D9  x  x  P  x 
+ x D5 D8  x  x 
+ x  x  x D2  x 
+ x  x D4  x D3 
+ x  x D7 D1  x 
+
+mov 271: el can 8 paso de 17 a 22
+       x       
+   D10   D11   
+D9  x D8  P  x 
+ x D5  x  x  x 
+ x  x  x D2  x 
+ x  x D4  x D3 
+ x  x D7 D1  x 
+
+mov 272: el puma paso de 23 a 24
+       x       
+   D10   D11   
+D9  x D8  x  P 
+ x D5  x  x  x 
+ x  x  x D2  x 
+ x  x D4  x D3 
+ x  x D7 D1  x 
+
+mov 273: el can 11 paso de 26 a 23
+       x       
+   D10    x    
+D9  x D8 D11 P 
+ x D5  x  x  x 
+ x  x  x D2  x 
+ x  x D4  x D3 
+ x  x D7 D1  x 
+
+mov 274: el can 3 paso de 9 a 8
+       x       
+   D10    x    
+D9  x D8 D11 P 
+ x D5  x  x  x 
+ x  x  x D2  x 
+ x  x D4 D3  x 
+ x  x D7 D1  x 
+
+mov 275: el can 2 paso de 13 a 12
+       x       
+   D10    x    
+D9  x D8 D11 P 
+ x D5  x  x  x 
+ x  x D2  x  x 
+ x  x D4 D3  x 
+ x  x D7 D1  x 
+
+mov 276: el can 7 paso de 2 a 1
+       x       
+   D10    x    
+D9  x D8 D11 P 
+ x D5  x  x  x 
+ x  x D2  x  x 
+ x  x D4 D3  x 
+ x D7  x D1  x 
+
+mov 277: el can 1 paso de 3 a 4
+       x       
+   D10    x    
+D9  x D8 D11 P 
+ x D5  x  x  x 
+ x  x D2  x  x 
+ x  x D4 D3  x 
+ x D7  x  x D1 
+
+mov 278: el can 2 paso de 12 a 17
+       x       
+   D10    x    
+D9  x D8 D11 P 
+ x D5 D2  x  x 
+ x  x  x  x  x 
+ x  x D4 D3  x 
+ x D7  x  x D1 
+
+mov 279: el can 11 paso de 23 a 18
+       x       
+   D10    x    
+D9  x D8  x  P 
+ x D5 D2 D11 x 
+ x  x  x  x  x 
+ x  x D4 D3  x 
+ x D7  x  x D1 
+
+mov 280: el can 10 paso de 25 a 26
+       x       
+    x    D10   
+D9  x D8  x  P 
+ x D5 D2 D11 x 
+ x  x  x  x  x 
+ x  x D4 D3  x 
+ x D7  x  x D1 
+
+mov 281: el can 5 paso de 16 a 11
+       x       
+    x    D10   
+D9  x D8  x  P 
+ x  x D2 D11 x 
+ x D5  x  x  x 
+ x  x D4 D3  x 
+ x D7  x  x D1 
+
+mov 282: el can 9 paso de 20 a 25
+       x       
+   D9    D10   
+ x  x D8  x  P 
+ x  x D2 D11 x 
+ x D5  x  x  x 
+ x  x D4 D3  x 
+ x D7  x  x D1 
+
+mov 283: el can 10 paso de 26 a 23
+       x       
+   D9     x    
+ x  x D8 D10 P 
+ x  x D2 D11 x 
+ x D5  x  x  x 
+ x  x D4 D3  x 
+ x D7  x  x D1 
+
+mov 284: el can 9 paso de 25 a 26
+       x       
+    x    D9    
+ x  x D8 D10 P 
+ x  x D2 D11 x 
+ x D5  x  x  x 
+ x  x D4 D3  x 
+ x D7  x  x D1 
+
+mov 285: el can 1 paso de 4 a 9
+       x       
+    x    D9    
+ x  x D8 D10 P 
+ x  x D2 D11 x 
+ x D5  x  x  x 
+ x  x D4 D3 D1 
+ x D7  x  x  x 
+
+mov 286: el can 4 paso de 7 a 2
+       x       
+    x    D9    
+ x  x D8 D10 P 
+ x  x D2 D11 x 
+ x D5  x  x  x 
+ x  x  x D3 D1 
+ x D7 D4  x  x 
+
+mov 287: el can 3 paso de 8 a 3
+       x       
+    x    D9    
+ x  x D8 D10 P 
+ x  x D2 D11 x 
+ x D5  x  x  x 
+ x  x  x  x D1 
+ x D7 D4 D3  x 
+
+mov 288: el can 7 paso de 1 a 6
+       x       
+    x    D9    
+ x  x D8 D10 P 
+ x  x D2 D11 x 
+ x D5  x  x  x 
+ x D7  x  x D1 
+ x  x D4 D3  x 
+
+mov 289: el can 5 paso de 11 a 12
+       x       
+    x    D9    
+ x  x D8 D10 P 
+ x  x D2 D11 x 
+ x  x D5  x  x 
+ x D7  x  x D1 
+ x  x D4 D3  x 
+
+mov 290: el can 8 paso de 22 a 27
+      D8       
+    x    D9    
+ x  x  x D10 P 
+ x  x D2 D11 x 
+ x  x D5  x  x 
+ x D7  x  x D1 
+ x  x D4 D3  x 
+
+mov 291: el puma salto de 24 a 22 y se comio al perro 10
+      D8       
+    x    D9    
+ x  x  P  x  x 
+ x  x D2 D11 x 
+ x  x D5  x  x 
+ x D7  x  x D1 
+ x  x D4 D3  x 
+
+mov 292: el can 3 paso de 3 a 8
+      D8       
+    x    D9    
+ x  x  P  x  x 
+ x  x D2 D11 x 
+ x  x D5  x  x 
+ x D7  x D3 D1 
+ x  x D4  x  x 
+
+mov 293: el can 4 paso de 2 a 3
+      D8       
+    x    D9    
+ x  x  P  x  x 
+ x  x D2 D11 x 
+ x  x D5  x  x 
+ x D7  x D3 D1 
+ x  x  x D4  x 
+
+mov 294: el can 1 paso de 9 a 14
+      D8       
+    x    D9    
+ x  x  P  x  x 
+ x  x D2 D11 x 
+ x  x D5  x D1 
+ x D7  x D3  x 
+ x  x  x D4  x 
+
+mov 295: el can 9 paso de 26 a 25
+      D8       
+   D9     x    
+ x  x  P  x  x 
+ x  x D2 D11 x 
+ x  x D5  x D1 
+ x D7  x D3  x 
+ x  x  x D4  x 
+
+mov 296: el can 8 paso de 27 a 26
+       x       
+   D9    D8    
+ x  x  P  x  x 
+ x  x D2 D11 x 
+ x  x D5  x D1 
+ x D7  x D3  x 
+ x  x  x D4  x 
+
+mov 297: el can 7 paso de 6 a 5
+       x       
+   D9    D8    
+ x  x  P  x  x 
+ x  x D2 D11 x 
+ x  x D5  x D1 
+D7  x  x D3  x 
+ x  x  x D4  x 
+
+mov 298: el can 9 paso de 25 a 27
+      D9       
+    x    D8    
+ x  x  P  x  x 
+ x  x D2 D11 x 
+ x  x D5  x D1 
+D7  x  x D3  x 
+ x  x  x D4  x 
+
+mov 299: el puma paso de 22 a 23
+      D9       
+    x    D8    
+ x  x  x  P  x 
+ x  x D2 D11 x 
+ x  x D5  x D1 
+D7  x  x D3  x 
+ x  x  x D4  x 
+
+mov 300: el can 11 paso de 18 a 19
+      D9       
+    x    D8    
+ x  x  x  P  x 
+ x  x D2  x D11
+ x  x D5  x D1 
+D7  x  x D3  x 
+ x  x  x D4  x 
+
+mov 301: el can 2 paso de 17 a 18
+      D9       
+    x    D8    
+ x  x  x  P  x 
+ x  x  x D2 D11
+ x  x D5  x D1 
+D7  x  x D3  x 
+ x  x  x D4  x 
+
+mov 302: el can 5 paso de 12 a 11
+      D9       
+    x    D8    
+ x  x  x  P  x 
+ x  x  x D2 D11
+ x D5  x  x D1 
+D7  x  x D3  x 
+ x  x  x D4  x 
+
+mov 303: el puma paso de 23 a 22
+      D9       
+    x    D8    
+ x  x  P  x  x 
+ x  x  x D2 D11
+ x D5  x  x D1 
+D7  x  x D3  x 
+ x  x  x D4  x 
+
+mov 304: el can 7 paso de 5 a 0
+      D9       
+    x    D8    
+ x  x  P  x  x 
+ x  x  x D2 D11
+ x D5  x  x D1 
+ x  x  x D3  x 
+D7  x  x D4  x 
+
+mov 305: el can 3 paso de 8 a 7
+      D9       
+    x    D8    
+ x  x  P  x  x 
+ x  x  x D2 D11
+ x D5  x  x D1 
+ x  x D3  x  x 
+D7  x  x D4  x 
+
+mov 306: el can 4 paso de 3 a 2
+      D9       
+    x    D8    
+ x  x  P  x  x 
+ x  x  x D2 D11
+ x D5  x  x D1 
+ x  x D3  x  x 
+D7  x D4  x  x 
+
+mov 307: el can 8 paso de 26 a 23
+      D9       
+    x     x    
+ x  x  P D8  x 
+ x  x  x D2 D11
+ x D5  x  x D1 
+ x  x D3  x  x 
+D7  x D4  x  x 
+
+mov 308: el can 4 paso de 2 a 3
+      D9       
+    x     x    
+ x  x  P D8  x 
+ x  x  x D2 D11
+ x D5  x  x D1 
+ x  x D3  x  x 
+D7  x  x D4  x 
+
+mov 309: el can 1 paso de 14 a 13
+      D9       
+    x     x    
+ x  x  P D8  x 
+ x  x  x D2 D11
+ x D5  x D1  x 
+ x  x D3  x  x 
+D7  x  x D4  x 
+
+mov 310: el puma paso de 22 a 17
+      D9       
+    x     x    
+ x  x  x D8  x 
+ x  x  P D2 D11
+ x D5  x D1  x 
+ x  x D3  x  x 
+D7  x  x D4  x 
+
+mov 311: el can 5 paso de 11 a 12
+      D9       
+    x     x    
+ x  x  x D8  x 
+ x  x  P D2 D11
+ x  x D5 D1  x 
+ x  x D3  x  x 
+D7  x  x D4  x 
+
+mov 312: el can 11 paso de 19 a 14
+      D9       
+    x     x    
+ x  x  x D8  x 
+ x  x  P D2  x 
+ x  x D5 D1 D11
+ x  x D3  x  x 
+D7  x  x D4  x 
+
+mov 313: el can 3 paso de 7 a 6
+      D9       
+    x     x    
+ x  x  x D8  x 
+ x  x  P D2  x 
+ x  x D5 D1 D11
+ x D3  x  x  x 
+D7  x  x D4  x 
+
+mov 314: el can 9 paso de 27 a 25
+       x       
+   D9     x    
+ x  x  x D8  x 
+ x  x  P D2  x 
+ x  x D5 D1 D11
+ x D3  x  x  x 
+D7  x  x D4  x 
+
+mov 315: el puma salto de 17 a 7 y se comio al perro 5
+       x       
+   D9     x    
+ x  x  x D8  x 
+ x  x  x D2  x 
+ x  x  x D1 D11
+ x D3  P  x  x 
+D7  x  x D4  x 
+
+mov 316: el can 7 paso de 0 a 1
+       x       
+   D9     x    
+ x  x  x D8  x 
+ x  x  x D2  x 
+ x  x  x D1 D11
+ x D3  P  x  x 
+ x D7  x D4  x 
+
+mov 317: el can 1 paso de 13 a 12
+       x       
+   D9     x    
+ x  x  x D8  x 
+ x  x  x D2  x 
+ x  x D1  x D11
+ x D3  P  x  x 
+ x D7  x D4  x 
+
+mov 318: el can 11 paso de 14 a 13
+       x       
+   D9     x    
+ x  x  x D8  x 
+ x  x  x D2  x 
+ x  x D1 D11 x 
+ x D3  P  x  x 
+ x D7  x D4  x 
+
+mov 319: el can 9 paso de 25 a 20
+       x       
+    x     x    
+D9  x  x D8  x 
+ x  x  x D2  x 
+ x  x D1 D11 x 
+ x D3  P  x  x 
+ x D7  x D4  x 
+
+mov 320: el can 11 paso de 13 a 14
+       x       
+    x     x    
+D9  x  x D8  x 
+ x  x  x D2  x 
+ x  x D1  x D11
+ x D3  P  x  x 
+ x D7  x D4  x 
+
+mov 321: el can 8 paso de 23 a 26
+       x       
+    x    D8    
+D9  x  x  x  x 
+ x  x  x D2  x 
+ x  x D1  x D11
+ x D3  P  x  x 
+ x D7  x D4  x 
+
+mov 322: el can 4 paso de 3 a 4
+       x       
+    x    D8    
+D9  x  x  x  x 
+ x  x  x D2  x 
+ x  x D1  x D11
+ x D3  P  x  x 
+ x D7  x  x D4 
+
+mov 323: el can 7 paso de 1 a 2
+       x       
+    x    D8    
+D9  x  x  x  x 
+ x  x  x D2  x 
+ x  x D1  x D11
+ x D3  P  x  x 
+ x  x D7  x D4 
+
+mov 324: el can 9 paso de 20 a 21
+       x       
+    x    D8    
+ x D9  x  x  x 
+ x  x  x D2  x 
+ x  x D1  x D11
+ x D3  P  x  x 
+ x  x D7  x D4 
+
+mov 325: el can 3 paso de 6 a 1
+       x       
+    x    D8    
+ x D9  x  x  x 
+ x  x  x D2  x 
+ x  x D1  x D11
+ x  x  P  x  x 
+ x D3 D7  x D4 
+
+mov 326: el can 2 paso de 18 a 23
+       x       
+    x    D8    
+ x D9  x D2  x 
+ x  x  x  x  x 
+ x  x D1  x D11
+ x  x  P  x  x 
+ x D3 D7  x D4 
+
+mov 327: el can 11 paso de 14 a 19
+       x       
+    x    D8    
+ x D9  x D2  x 
+ x  x  x  x D11
+ x  x D1  x  x 
+ x  x  P  x  x 
+ x D3 D7  x D4 
+
+mov 328: el puma salto de 7 a 17 y se comio al perro 1
+       x       
+    x    D8    
+ x D9  x D2  x 
+ x  x  P  x D11
+ x  x  x  x  x 
+ x  x  x  x  x 
+ x D3 D7  x D4 
+
+mov 329: el can 7 paso de 2 a 7
+       x       
+    x    D8    
+ x D9  x D2  x 
+ x  x  P  x D11
+ x  x  x  x  x 
+ x  x D7  x  x 
+ x D3  x  x D4 
+
+mov 330: el can 3 paso de 1 a 6
+       x       
+    x    D8    
+ x D9  x D2  x 
+ x  x  P  x D11
+ x  x  x  x  x 
+ x D3 D7  x  x 
+ x  x  x  x D4 
+
+mov 331: el puma paso de 17 a 12
+       x       
+    x    D8    
+ x D9  x D2  x 
+ x  x  x  x D11
+ x  x  P  x  x 
+ x D3 D7  x  x 
+ x  x  x  x D4 
+
+mov 332: el can 4 paso de 4 a 3
+       x       
+    x    D8    
+ x D9  x D2  x 
+ x  x  x  x D11
+ x  x  P  x  x 
+ x D3 D7  x  x 
+ x  x  x D4  x 
+
+mov 333: el can 8 paso de 26 a 25
+       x       
+   D8     x    
+ x D9  x D2  x 
+ x  x  x  x D11
+ x  x  P  x  x 
+ x D3 D7  x  x 
+ x  x  x D4  x 
+
+mov 334: el can 9 paso de 21 a 16
+       x       
+   D8     x    
+ x  x  x D2  x 
+ x D9  x  x D11
+ x  x  P  x  x 
+ x D3 D7  x  x 
+ x  x  x D4  x 
+
+mov 335: el puma salto de 12 a 2 y se comio al perro 7
+       x       
+   D8     x    
+ x  x  x D2  x 
+ x D9  x  x D11
+ x  x  x  x  x 
+ x D3  x  x  x 
+ x  x  P D4  x 
+
