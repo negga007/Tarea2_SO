@@ -66,6 +66,11 @@ void *hiloCan(void *argumento){
             break;
         }
 
+        if(mesa.idMesa == mesaQueSeCae && fichaQueSeCae == idCan){
+            avisarCaida(mesa, res_Puma); //cae el can, gana el puma
+            break;
+        }
+
         for(int intento = 0; intento < intentosPorCiclo && !muerto; intento++){
             if(pruebaDcaminar(mesa, idCan, miCasilla, dadito, muerto)){
                 break;

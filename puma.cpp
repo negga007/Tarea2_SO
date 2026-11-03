@@ -86,6 +86,11 @@ void *hiloPuma(void *argumento){
 
         if(partidaTerminada(mesa)) break;
 
+        if(mesa.idMesa == mesaQueSeCae && fichaQueSeCae == id_delpuma){
+            avisarCaida(mesa, res_Perros); //cae el puma
+            break;
+        }
+
         for(int intento = 0; intento < intentosPorCiclo; intento++){
             if(jugarPumita(mesa, dadito)){
                 break; //ya se movio, a dormir

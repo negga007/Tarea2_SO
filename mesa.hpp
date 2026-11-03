@@ -12,6 +12,8 @@ constexpr int res_Nadie = 0;
 constexpr int res_Puma = 1;
 constexpr int res_Perros = 2;
 constexpr int res_Empate = 3;
+constexpr int mesaQueSeCae = -1;// -1 nadie, id mesa alguien
+constexpr int fichaQueSeCae = -1; // -1 nadie id ficha de quien se cayo
 
 //una mesa es una partida entera con todo lo q comparten sus fichas
 struct Mesa {
@@ -23,6 +25,7 @@ struct Mesa {
     int movimientos;                               //n mov
     bool terminada;                                
     int resultado;
+    int abandonaron = res_Nadie;
     vector<string> jugadas;                                   
 
     //esto solo se lee, nadie lo cambia asi q no necesita mutex
@@ -53,4 +56,10 @@ void avisarMovimiento(Mesa &mesa);
 inline void anotarJugada(Mesa &mesa, const std::string &jugada){
     Guard guardia(&mesa.mutexAviso);
     mesa.jugadas.push_back(jugada);
+}
+
+inline void avisarCaida(Mesa &mesa, int ganador){
+    Guard guardia(&mesa.mutexAviso);
+    mesa.abandonaron = ganador;
+    pthread_cond_signal(&mesa.avisoAlJuez);
 }

@@ -18,9 +18,11 @@ void *hiloJuez(void *datosDlaMesa){
 
     while(!partidaTerminada(mesa)){
         int movimientos;
+        int abandonaron;
         {
             Guard guardia(&mesa.mutexAviso);
             movimientos = mesa.movimientos;
+            abandonaron = mesa.abandonaron;
         }
 
         //tablero
@@ -38,7 +40,9 @@ void *hiloJuez(void *datosDlaMesa){
         }
 
         // quien gano
-        if(pumaGano(estadoTablero)){
+        if(abandonaron != res_Nadie){
+            resultado = abandonaron;
+        }else if(pumaGano(estadoTablero)){
             resultado = res_Puma;
         }else if(pumaAcorralado(estadoTablero, *mesa.tablero, *mesa.mapeoCapturas)){
             resultado = res_Perros;
@@ -66,8 +70,17 @@ void *hiloJuez(void *datosDlaMesa){
         }
 
         if(resultado != res_Nadie){
+            
             Guard guardiaConsola(&mutexConsola);
-            if(resultado == res_Puma){
+
+            if(abandonaron != res_Nadie){
+                cout << "mesa " << mesa.idMesa << ": un jugador se cayo, gana por abandono el ";
+                if(resultado == res_Puma){
+                    cout << "puma" << endl;
+                }else{
+                    cout << "equipo de los canes" << endl;
+                }
+            }else if(resultado == res_Puma){
                 cout << "mesa " << mesa.idMesa << ": gano el puma con " ;
                 cout << estadoTablero.contadorCapturas << " capturas" << endl;
             }else if(resultado == res_Perros){
@@ -82,7 +95,7 @@ void *hiloJuez(void *datosDlaMesa){
 
         // espera un movimiento
         Guard guardia(&mesa.mutexAviso);
-        while(mesa.movimientos == movimientos && !mesa.terminada){
+        while(mesa.movimientos == movimientos && !mesa.terminada && mesa.abandonaron == res_Nadie){
             pthread_cond_wait(&mesa.avisoAlJuez, &mesa.mutexAviso);
         }
     }
