@@ -85,9 +85,9 @@ void *hiloPuma(void *argumento){
         usleep(tirarRetardo(dadito, *mesa.config) * 1000); //de ms a microsegundos
 
         if(partidaTerminada(mesa)) break;
-
+      
         if(mesa.idMesa == mesaQueSeCae && fichaQueSeCae == id_delpuma){
-            avisarCaida(mesa, res_Perros); //cae el puma
+            avisarCaida(mesa, res_Perros); //cae el puma, es para probar caida esto
             break;
         }
 

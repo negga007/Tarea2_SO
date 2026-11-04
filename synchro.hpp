@@ -17,13 +17,13 @@ struct Guard {
     }
 };  
 
-//envoltorio del semaforo, inline para q varios cpp lo puedan incluir sin chocar
+//envoltorio del semaforo
 inline void semIniciar(sem_t *semaforo, unsigned int valor){
     sem_init(semaforo, 0, valor);
 }
 
 inline void semEsperar(sem_t *semaforo){
-    // ctrl+c corta sem_wait con EINTR, hay que reintentar
+    // ctrl+c 
     while(sem_wait(semaforo) == -1 && errno == EINTR){
     }
 }
