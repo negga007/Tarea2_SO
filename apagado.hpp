@@ -31,7 +31,7 @@ inline void sacarMesa(Mesa *mesa){
     }
 }
 
-//uso de nn en vez de n sola para ñ pork los romanos lo hacian asi y es cul  :3
+
 //hilo duerme esperando ctrl+c, main bloquea sigint antes de crear hilos
 inline void *hiloSigint(void *){
     sigset_t atrapa;
@@ -43,6 +43,7 @@ inline void *hiloSigint(void *){
 
     Guard guardia(&mutexTorneo);
     apagando = true; //meterMesa ya no deja entrar mas mesas
+    //esta seccion es para avisarle a cada mesa activa que termine
     for(auto mesa : mesasActivas){
         Guard guardiaMesa(&mesa->mutexAviso);
         mesa->terminada = true;

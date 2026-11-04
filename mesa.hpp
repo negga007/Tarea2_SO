@@ -12,20 +12,24 @@ constexpr int res_Nadie = 0;
 constexpr int res_Puma = 1;
 constexpr int res_Perros = 2;
 constexpr int res_Empate = 3;
-constexpr int mesaQueSeCae = -1;// -1 nadie, id mesa alguien
-constexpr int fichaQueSeCae = -1; // -1 nadie id ficha de quien se cayo
+//esta seccion es solo para probar el abandono
+constexpr int mesaQueSeCae = -1;
+constexpr int fichaQueSeCae = -1; 
 
 //una mesa es una partida entera con todo lo q comparten sus fichas
 struct Mesa {
     int idMesa;                                    //numero de la mesa
     Estado estado;                                 //el tablero compartido
     pthread_mutex_t mutexCasilla[TotalPosiciones]; //un mutex por casilla
-    pthread_mutex_t mutexAviso;                    //cuida movimientos, terminada y resultado
+    pthread_mutex_t mutexAviso;                    //cuida el tablero, las jugadas, movimientos, terminada y resultado.
     pthread_cond_t avisoAlJuez;                    //las fichas avisan aca q se movieron
     int movimientos;                               //n mov
     bool terminada;                                
     int resultado;
     int abandonaron = res_Nadie;
+    pthread_mutex_t mutexInit;
+    pthread_cond_t condInit;
+    bool iniciada = false;
     vector<string> jugadas;                                   
 
     //esto solo se lee, nadie lo cambia asi q no necesita mutex
@@ -48,16 +52,7 @@ void abrirCasillas(Mesa &mesa, const int casillas[], int cuantas);
 
 
 bool partidaTerminada(Mesa &mesa);
-
-//avisa al Juez q movimiento valido
-void avisarMovimiento(Mesa &mesa);
-
-//deja anotada una jugada para q el juez la escriba en el log
-inline void anotarJugada(Mesa &mesa, const std::string &jugada){
-    Guard guardia(&mesa.mutexAviso);
-    mesa.jugadas.push_back(jugada);
-}
-
+//esta seccion es para avisarle al juez que una ficha se cayo
 inline void avisarCaida(Mesa &mesa, int ganador){
     Guard guardia(&mesa.mutexAviso);
     mesa.abandonaron = ganador;

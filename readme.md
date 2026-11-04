@@ -18,7 +18,7 @@ Grid de 5 × 5 con casillas numeradas del 0 al 24, donde `id = y * 5 + x` permit
 El código está dividido en varios módulos para mantener el orden:
 * `torneo.cpp`: El `main`, emparejamiento de mesas, semáforo global y manejo de la señal.
 * `mesa.cpp` / `mesa.hpp`: Define la estructura de la partida, inicializa/destruye mutexes y contiene la lógica de cerrar/abrir casillas.
-* `juez.cpp` / `juez.hpp`: El hilo árbitro que evalúa las reglas, detecta victorias y escribe los logs.
+* `juez.cpp` / `juez.hpp`: El árbitro de la mesa. Valida y aplica cada movimiento que le piden las fichas, detecta victorias y abandono, y escribe los logs.
 * `puma.cpp` / `puma.hpp`: Lógica del hilo del puma.
 * `can.cpp` / `can.hpp`: Lógica de los 12 hilos de los perros.
 * `livritoReglas.cpp` / `livritoReglas.hpp`: Funciones de reglas: validar paso y salto, aplicarlos, y detectar si el puma ganó o quedó acorralado.
@@ -33,8 +33,8 @@ El código está dividido en varios módulos para mantener el orden:
 
 ## Hilos y sincronización
 Por cada partida se crea un hilo de mesa que lanza 14 hilos: un juez, un puma y 12 perros.
-* **Un mutex por casilla** (28 en total): para moverse, una ficha toma con `trylock` los mutex de las casillas de origen y destino. En caso de captura, también toma el de la casilla intermedia. Si alguno está ocupado, libera los mutex que alcanzó a tomar y vuelve a intentarlo, hasta un máximo de tres intentos. La casilla se bloquea solo durante el movimiento, después de verificar que esté libre.
-* **`mutexAviso` + variable de condición**: protegen el contador de movimientos, el indicador de término, el resultado y la lista de jugadas. Las fichas avisan al juez cada vez que se mueven.
+* **Un mutex por casilla** (28 en total): para moverse, una ficha toma con `trylock` los mutex de las casillas de origen y destino. En caso de captura, también toma el de la casilla intermedia. Si alguno está ocupado, libera los mutex que alcanzó a tomar y vuelve a intentarlo, hasta un máximo de tres intentos. Con las casillas cerradas, la ficha le pide al juez que valide y aplique el movimiento, y recién después las suelta.
+* **`mutexAviso` + variable de condición**: protegen el contador de movimientos, el indicador de término, el resultado y la lista de jugadas. Bajo este mutex el juez valida, aplica y anota cada movimiento, revisa si la partida terminó y avisa al hilo del juez, si la partida ya terminó o hubo un abandono, rechaza el movimiento.
 * **Semáforo `cupos`**: limita a `M` las mesas jugando a la vez, las demás esperan su turno.
 * **`mutexConsola`**: permite imprimir una línea a la vez.
 * **`mutexTorneo`**: protege la lista de mesas activas y el indicador `apagando`.
@@ -61,7 +61,7 @@ g++ -Wall -Wextra -std=c++17 *.cpp -o torneo -pthread
 ## Logs
 Cada mesa escribe su propio archivo `mesa_N.txt`, con las jugadas numeradas y un dibujo del tablero después de cada tanda de movimientos. Además, cada jugada y el resultado final se imprimen en la terminal.
 
-##Visualización del tablero
+## Visualización del tablero
 - 0-24 -> grid 5x5
 - 25 -> trono izquierda
 - 26 -> trono derecha
@@ -87,7 +87,7 @@ DOG 0 0 0
 DOG 1 1 0
 ...
 ```
-* `PUMA_INIT` acepta `TRONO_TOP`, `TRONO_LEFT`, `TRONO_RIGHT` o coordenadas `x y` del grid; por ejemplo: `PUMA_INIT 0 0`.
+* `PUMA_INIT` acepta `TRONO_TOP`, `TRONO_LEFT`, `TRONO_RIGHT` o coordenadas `x y` del grid, por ejemplo: `PUMA_INIT 0 0`.
 * `DOG id x y`: `id` va de 0 a 11, y `x` e `y` van de 0 a 4.
 
 * Si una línea no es válida o `DELAY_MIN` es mayor que `DELAY_MAX`, el programa avisa por `cerr` y no se inicia.
@@ -98,7 +98,7 @@ DOG 1 1 0
 * `config_encerrado_forzado.txt`: el puma parte en la esquina `0 0`, rodeado de perros, así que queda acorralado de inmediato y ganan los perros.
 
 ## Probar el abandono
-En `mesa.hpp`, `mesaQueSeCae` y `fichaQueSeCae` están en `-1`; es decir, nadie abandona. Para probarlo, se puede indicar el id de una mesa y el id de una ficha (de 0 a 11 para los perros y 12 para el puma), y luego recompilar. Esa ficha abandonará y ganará el otro bando.
+En `mesa.hpp`, `mesaQueSeCae` y `fichaQueSeCae` están en `-1`, es decir, nadie abandona. Para probarlo, se puede indicar el id de una mesa y el id de una ficha (de 0 a 11 para los perros y 12 para el puma), y luego recompilar. Esa ficha abandonará y ganará el otro bando.
 
 ## Referencias
 Para las reglas del juego se tomó como base el enunciado de la tarea, junto con las siguientes fuentes:

@@ -14,4 +14,3 @@ struct configuraxion {
 
 //lee el config.txt y llena el Config, devuelve false si algo viene malo
 bool leerConfig(const string &ruta, configuraxion &config);
-// implementación en config.cpp

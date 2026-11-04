@@ -1,7 +1,6 @@
 #pragma once
 #include "tablita.hpp"
 #include "estado.hpp"
-// reglas del juego, con una línea por función para que se entienda
 
 //revisa si la ficha se puede mover un paso a ese destino
 bool validarPaso(const Estado &estado, const GRafo &grafo, int ficha, int destino);

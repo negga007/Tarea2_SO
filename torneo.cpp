@@ -30,21 +30,44 @@ void *hiloDeLamesa(void *datosDlaMesa){
     semEsperar(&cupos);
 
     Mesa mesa;
-    iniciarMesa(mesa, datitos.rutMesa, *datitos.tablero, *datitos.mapeoCapturas, *datitos.config);
+    mesa.idMesa = datitos.rutMesa;
+    mesa.tablero = datitos.tablero;
+    mesa.mapeoCapturas = datitos.mapeoCapturas;
+    mesa.config = datitos.config;
+    mesa.iniciada = false;
+    pthread_mutex_init(&mesa.mutexInit, NULL);
+    pthread_cond_init(&mesa.condInit, NULL);
 
-    //si llego ctrl+c no jugamos
+    pthread_t hiloDelJuez;
+    pthread_create(&hiloDelJuez, NULL, hiloJuez, &mesa);
+
+    // esperar que el juez termine de inicializar la mesa
+    {
+        Guard guardia(&mesa.mutexInit);
+        while(!mesa.iniciada){
+            pthread_cond_wait(&mesa.condInit, &mesa.mutexInit);
+        }
+    }
+
+    // si llego ctrl+c antes de jugar, terminamos al juez y salimos
     if(!meterMesa(&mesa)){
+        {
+            Guard guardia(&mesa.mutexAviso);
+            mesa.terminada = true;
+            pthread_cond_broadcast(&mesa.avisoAlJuez);
+        }
+        pthread_join(hiloDelJuez, NULL);
         destruirMesa(mesa);
+        pthread_mutex_destroy(&mesa.mutexInit);
+        pthread_cond_destroy(&mesa.condInit);
         semAvisar(&cupos);
         return NULL;
     }
 
-    pthread_t hiloDelJuez;
     pthread_t hiloDelPuma;
     pthread_t hilosCanes[TotalPerros];
     rutCan rutas[TotalPerros];
 
-    pthread_create(&hiloDelJuez, NULL, hiloJuez, &mesa);
     pthread_create(&hiloDelPuma, NULL, hiloPuma, &mesa);
 
     for(int idCan = 0; idCan < TotalPerros; idCan++){
@@ -55,13 +78,15 @@ void *hiloDeLamesa(void *datosDlaMesa){
 
     pthread_join(hiloDelJuez, NULL);
     pthread_join(hiloDelPuma, NULL);
-    
+
     for(auto &hilo : hilosCanes){
         pthread_join(hilo, NULL);
     }
 
-    sacarMesa(&mesa); //sacar antes de destruir
+    sacarMesa(&mesa);
     destruirMesa(mesa);
+    pthread_mutex_destroy(&mesa.mutexInit);
+    pthread_cond_destroy(&mesa.condInit);
     semAvisar(&cupos);
     return NULL;
 }

@@ -1,10 +1,8 @@
 #include <unistd.h>
 #include <iostream>
 #include "puma.hpp"
-#include "livritoReglas.hpp"
 #include "azar.hpp"
-#include "consola.hpp"
-#include "synchro.hpp"
+#include "juez.hpp"
 using namespace std;
 
 constexpr int intentosPorCiclo = 3; //cuantas jugadas prueba antes de volver a dormir
@@ -29,21 +27,8 @@ static bool jugarPumita(Mesa &mesa, mt19937 &dadito){
         if(!cerrarCasillas(mesa, caminata, 2)){
             return false; //alguna estaba ocupada
         }
-        bool valido = validarPaso(mesa.estado, *mesa.tablero, id_delpuma, destino);
-        if(valido){
-            aplicarPaso(mesa.estado, id_delpuma, destino);
-        }
+        bool valido = juezValidaPaso(mesa, id_delpuma, destino);
         abrirCasillas(mesa, caminata, 2);
-
-        if(valido){
-            string texto = "el puma paso de " + to_string(origen) + " a " + to_string(destino);
-            {
-                Guard guardiaConsola(&mutexConsola);
-                cout << "mesa " << mesa.idMesa << ": " << texto << endl;
-            }
-            anotarJugada(mesa, texto);
-            avisarMovimiento(mesa);
-        }
         return valido;
     }
 
@@ -55,25 +40,8 @@ static bool jugarPumita(Mesa &mesa, mt19937 &dadito){
     if(!cerrarCasillas(mesa, caminata, 3)){
         return false;
     }
-    int casillaCapturada = 0;
-    int perroComido = Vacio;
-    bool valido = validarSalto(mesa.estado, *mesa.mapeoCapturas, id_delpuma, destino, casillaCapturada);
-    if(valido){
-        perroComido = mesa.estado.casilla[casillaCapturada]; //hay q verlo antes de aplicar
-        aplicarSalto(mesa.estado, id_delpuma, destino, casillaCapturada);
-    }
+    bool valido = juezValidaSalto(mesa, destino);
     abrirCasillas(mesa, caminata, 3);
-
-    if(valido){
-        string texto = "el puma salto de " + to_string(origen) + " a " + to_string(destino)
-                     + " y se comio al perro " + to_string(perroComido);
-        {
-            Guard guardiaConsola(&mutexConsola);
-            cout << "mesa " << mesa.idMesa << ": " << texto << endl;
-        }
-        anotarJugada(mesa, texto);
-        avisarMovimiento(mesa);
-    }
     return valido;
 }
 

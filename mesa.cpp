@@ -67,9 +67,3 @@ bool partidaTerminada(Mesa &mesa){
     Guard guardia(&mesa.mutexAviso);
     return mesa.terminada;
 }
-
-void avisarMovimiento(Mesa &mesa){
-    Guard guardia(&mesa.mutexAviso);
-    mesa.movimientos++;
-    pthread_cond_signal(&mesa.avisoAlJuez);
-}
